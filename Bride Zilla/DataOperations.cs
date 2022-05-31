@@ -113,10 +113,7 @@ namespace Bride_Zilla
         //("UPDATE " + table + " SET `ID`=@ID,`Panna młoda`=@bride,`Adres panny młodej`=@brideAdress," +
         //    "`Telefon panny młodej`=@bridePhone,`Pan młody`=@groom,`Adres pana młodego`=@groomAdress,`Telefon pana młodego`=@groomPhone," +
         //    "`Data ślubu`=@weddingDate,`Lokal weselny`=@weddingPlace WHERE 1");
-        //" SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion," +
-        //     "`Sesja narzeczeńska`=@engag,`Zapłacona`=@engagPaid,`Album`=@photo,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint," +
-        //     "`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid,`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel," +
-        //     "`Wesele zapłacone`=@wedPaid WHERE 1"
+        
     }
 }
 
