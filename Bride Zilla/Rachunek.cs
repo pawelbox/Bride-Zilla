@@ -125,7 +125,11 @@ namespace Bride_Zilla
             edit.guestToPay = int.Parse(txtGuestToPay.Text);
             edit.wedPaid = txtWedPaid.Text;
 
-            edit.Update();
+            edit.Update("bill", " SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engagment," +
+                    "`Zapłacona`=@engPaid,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid," +
+                    "`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE ID= @ID");
+            ReloadGrid();
+            ClearText();
         }
     }
 }

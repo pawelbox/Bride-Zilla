@@ -78,15 +78,13 @@ namespace Bride_Zilla
             delete.ExecuteNonQuery();
             connect.con.Close();
         }
-        public void Update()
+        public void Update(string table, string value)
         {
             ConnectionString connect = new ConnectionString();
             connect.Connect();
             connect.con.Open();
 
-            MySqlCommand update = new MySqlCommand("UPDATE `bill` SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engagment," +
-                    "`Zapłacona`=@engPaid,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid," +
-                    "`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE ID= @ID", connect.con);
+            MySqlCommand update = new MySqlCommand("UPDATE " +table + value);
 
             update.Parameters.AddWithValue("@ID", ID);
             update.Parameters.AddWithValue("@bride", bride);
