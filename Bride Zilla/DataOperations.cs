@@ -37,7 +37,7 @@ namespace Bride_Zilla
             ConnectionString connect = new ConnectionString();
             connect.Connect();
             connect.con.Open();
-                       
+
             MySqlCommand insert = new MySqlCommand("INSERT INTO " + table + value);
 
             insert.Parameters.AddWithValue("@ID", customerID);
@@ -77,5 +77,46 @@ namespace Bride_Zilla
             delete.ExecuteNonQuery();
             connect.con.Close();
         }
+        public void Update(string table, string value)
+        {
+            ConnectionString connect = new ConnectionString();
+            connect.Connect();
+
+            MySqlCommand update = new MySqlCommand("UPDATE " + table + value);
+
+            update.Parameters.AddWithValue("@ID", customerID);
+            update.Parameters.AddWithValue("@bride", bride);
+            update.Parameters.AddWithValue("@brideAdress", brideAdress);
+            update.Parameters.AddWithValue("@bridePhone", bridePhone);
+            update.Parameters.AddWithValue("@groom", groom);
+            update.Parameters.AddWithValue("@groomAdress", groomAdress);
+            update.Parameters.AddWithValue("@groomPhone", groomPhone);
+            update.Parameters.AddWithValue("@weddingDate", weddingDate);
+            update.Parameters.AddWithValue("@weddingPlace", weddingPlace);
+            update.Parameters.AddWithValue("@jurnal", jurnal);
+            update.Parameters.AddWithValue("@sesion", sesion);
+            update.Parameters.AddWithValue("@engag", engag);
+            update.Parameters.AddWithValue("@engagPaid", engagPaid);
+            update.Parameters.AddWithValue("@photo", photobook);
+            update.Parameters.AddWithValue("@extraPhoto", extraPhotobook);
+            update.Parameters.AddWithValue("@paint", paint);
+            update.Parameters.AddWithValue("@prints", prints);
+            update.Parameters.AddWithValue("@guestPaid", guestPaid);
+            update.Parameters.AddWithValue("@guestToPay", guestToPay);
+            update.Parameters.AddWithValue("@travel", travel);
+            update.Parameters.AddWithValue("@wedPaid", wedPaid);
+
+            update.Connection = connect.con;
+            update.ExecuteNonQuery();
+            connect.con.Close();
+        }
+        //("UPDATE " + table + " SET `ID`=@ID,`Panna młoda`=@bride,`Adres panny młodej`=@brideAdress," +
+        //    "`Telefon panny młodej`=@bridePhone,`Pan młody`=@groom,`Adres pana młodego`=@groomAdress,`Telefon pana młodego`=@groomPhone," +
+        //    "`Data ślubu`=@weddingDate,`Lokal weselny`=@weddingPlace WHERE 1");
+        //" SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion," +
+        //     "`Sesja narzeczeńska`=@engag,`Zapłacona`=@engagPaid,`Album`=@photo,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint," +
+        //     "`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid,`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel," +
+        //     "`Wesele zapłacone`=@wedPaid WHERE 1"
     }
 }
+
