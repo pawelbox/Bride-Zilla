@@ -81,6 +81,7 @@ namespace Bride_Zilla
         {
             ConnectionString connect = new ConnectionString();
             connect.Connect();
+            connect.con.Open();
 
             MySqlCommand update = new MySqlCommand("UPDATE " + table + value);
 

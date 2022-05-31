@@ -92,10 +92,12 @@ namespace Bride_Zilla
         private void btnEdit_Click(object sender, EventArgs e)
         {
             DataOperations edit = new DataOperations();
+            
             edit.Update("bill", " SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engag,`Zapłacona`=@engagPaid,`Album`=@photo," +
                 "`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid,`Zam. od gości do zapł.`=@guestToPay," +
                 "`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE 1");
-            
+
+            edit.customerID = txtID.Text;
             edit.jurnal = int.Parse(txtJurnal.Text);
             edit.sesion = int.Parse(txtSesion.Text);
             edit.engag = int.Parse(txtEngag.Text);
