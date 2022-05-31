@@ -10,6 +10,7 @@ namespace Bride_Zilla
     class DataOperations
     {
         public string customerID { get; set; }
+        public int ID { get; set; }
         public string bride { get; set; }
         public string brideAdress { get; set; }
         public string bridePhone { get; set; }
@@ -77,15 +78,17 @@ namespace Bride_Zilla
             delete.ExecuteNonQuery();
             connect.con.Close();
         }
-        public void Update(string table, string value)
+        public void Update()
         {
             ConnectionString connect = new ConnectionString();
             connect.Connect();
             connect.con.Open();
 
-            MySqlCommand update = new MySqlCommand("UPDATE " + table + value);
+            MySqlCommand update = new MySqlCommand("UPDATE `bill` SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engagment," +
+                    "`Zapłacona`=@engPaid,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid," +
+                    "`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE ID= @ID", connect.con);
 
-            update.Parameters.AddWithValue("@ID", customerID);
+            update.Parameters.AddWithValue("@ID", ID);
             update.Parameters.AddWithValue("@bride", bride);
             update.Parameters.AddWithValue("@brideAdress", brideAdress);
             update.Parameters.AddWithValue("@bridePhone", bridePhone);
@@ -94,11 +97,12 @@ namespace Bride_Zilla
             update.Parameters.AddWithValue("@groomPhone", groomPhone);
             update.Parameters.AddWithValue("@weddingDate", weddingDate);
             update.Parameters.AddWithValue("@weddingPlace", weddingPlace);
+
             update.Parameters.AddWithValue("@jurnal", jurnal);
             update.Parameters.AddWithValue("@sesion", sesion);
-            update.Parameters.AddWithValue("@engag", engag);
-            update.Parameters.AddWithValue("@engagPaid", engagPaid);
-            update.Parameters.AddWithValue("@photo", photobook);
+            update.Parameters.AddWithValue("@engagment", engag);
+            update.Parameters.AddWithValue("@engPaid", engagPaid);
+            update.Parameters.AddWithValue("@photobook", photobook);
             update.Parameters.AddWithValue("@extraPhoto", extraPhotobook);
             update.Parameters.AddWithValue("@paint", paint);
             update.Parameters.AddWithValue("@prints", prints);

@@ -35,6 +35,8 @@ namespace Bride_Zilla
             txtTravel.Clear();
             txtProfit.Clear();
             txtToPay.Clear();
+            txtBride.Clear();
+            txtGroom.Clear();
         }
         public void LoadBill()
         {
@@ -64,6 +66,22 @@ namespace Bride_Zilla
             }
 
         }
+        public void LoadCustomer()
+        {
+            try
+            {
+                string customerID = txtID.Text;
+                LoadData load = new LoadData();
+                load.LoadCustomerData("customers", customerID);
+                txtBride.AppendText(load.bride);
+                txtGroom.AppendText(load.groom);
+            }
+            catch (Exception)
+            {
+
+            }
+            
+        }
         public Rachunek()
         {
             InitializeComponent();
@@ -86,6 +104,7 @@ namespace Bride_Zilla
             {
                 ClearText();
                 LoadBill();
+                LoadCustomer();
             }
         }
 
@@ -93,11 +112,7 @@ namespace Bride_Zilla
         {
             DataOperations edit = new DataOperations();
             
-            edit.Update("bill", " SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engag,`Zapłacona`=@engagPaid,`Album`=@photo," +
-                "`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid,`Zam. od gości do zapł.`=@guestToPay," +
-                "`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE 1");
-
-            edit.customerID = txtID.Text;
+            edit.ID = int.Parse(txtID.Text);
             edit.jurnal = int.Parse(txtJurnal.Text);
             edit.sesion = int.Parse(txtSesion.Text);
             edit.engag = int.Parse(txtEngag.Text);
@@ -109,6 +124,8 @@ namespace Bride_Zilla
             edit.guestPaid = int.Parse(txtGuestPaid.Text);
             edit.guestToPay = int.Parse(txtGuestToPay.Text);
             edit.wedPaid = txtWedPaid.Text;
+
+            edit.Update();
         }
     }
 }
