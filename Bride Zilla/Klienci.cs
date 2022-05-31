@@ -126,6 +126,33 @@ namespace Bride_Zilla
                 LoadCustomer();
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataOperations edit = new DataOperations();
+
+                edit.ID = int.Parse(txtID.Text);
+                edit.bride = txtBride.Text;
+                edit.brideAdress = txtBrideAdress.Text;
+                edit.bridePhone = txtBridePhone.Text;
+                edit.groom = txtGroom.Text;
+                edit.groomAdress = txtGroomAdress.Text;
+                edit.groomPhone = txtGroomPhone.Text;
+                edit.weddingDate = txtDate.Text;
+                edit.weddingPlace = txtPlace.Text;
+                edit.Update("customers", " SET `ID`= @ID,`Panna młoda`= @bride,`Adres panny młodej`= @brideAdress," +
+                    "`Telefon panny młodej`=@bridePhone,`Pan młody`=@groom,`Adres pana młodego`=@groomAdress,`Telefon pana młodego`=@groomPhone," +
+                    "`Data ślubu`=@weddingDate,`Lokal weselny`=@weddingPlace WHERE ID= @ID");
+                ReloadGrid();
+                ClearText();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błąd połączenia z bazą!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

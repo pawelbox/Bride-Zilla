@@ -20,7 +20,6 @@ namespace Bride_Zilla
         }
         public void ClearText()
         {
-            //txtID.Clear();
             txtJurnal.Clear();
             txtSesion.Clear();
             txtEngag.Clear();
@@ -62,7 +61,7 @@ namespace Bride_Zilla
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -78,7 +77,7 @@ namespace Bride_Zilla
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -94,6 +93,8 @@ namespace Bride_Zilla
 
         private void btnRead_Click(object sender, EventArgs e)
         {
+            ClearText();
+            LoadCustomer();
             LoadBill();
         }
 
@@ -110,26 +111,33 @@ namespace Bride_Zilla
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            DataOperations edit = new DataOperations();
-            
-            edit.ID = int.Parse(txtID.Text);
-            edit.jurnal = int.Parse(txtJurnal.Text);
-            edit.sesion = int.Parse(txtSesion.Text);
-            edit.engag = int.Parse(txtEngag.Text);
-            edit.engagPaid = txtEngagPaid.Text;
-            edit.photobook = int.Parse(txtPhoto.Text);
-            edit.extraPhotobook = int.Parse(txtExtraPhoto.Text);
-            edit.paint = int.Parse(txtPaint.Text);
-            edit.prints = int.Parse(txtPrints.Text);
-            edit.guestPaid = int.Parse(txtGuestPaid.Text);
-            edit.guestToPay = int.Parse(txtGuestToPay.Text);
-            edit.wedPaid = txtWedPaid.Text;
+            try
+            {
+                DataOperations edit = new DataOperations();
 
-            edit.Update("bill", " SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engagment," +
-                    "`Zapłacona`=@engPaid,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid," +
-                    "`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE ID= @ID");
-            ReloadGrid();
-            ClearText();
+                edit.ID = int.Parse(txtID.Text);
+                edit.jurnal = int.Parse(txtJurnal.Text);
+                edit.sesion = int.Parse(txtSesion.Text);
+                edit.engag = int.Parse(txtEngag.Text);
+                edit.engagPaid = txtEngagPaid.Text;
+                edit.photobook = int.Parse(txtPhoto.Text);
+                edit.extraPhotobook = int.Parse(txtExtraPhoto.Text);
+                edit.paint = int.Parse(txtPaint.Text);
+                edit.prints = int.Parse(txtPrints.Text);
+                edit.guestPaid = int.Parse(txtGuestPaid.Text);
+                edit.guestToPay = int.Parse(txtGuestToPay.Text);
+                edit.wedPaid = txtWedPaid.Text;
+
+                edit.Update("bill", " SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engagment," +
+                        "`Zapłacona`=@engPaid,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints,`Zam. od gości zapł.`=@guestPaid," +
+                        "`Zam. od gości do zapł.`=@guestToPay,`Dojazd`=@travel,`Wesele zapłacone`=@wedPaid WHERE ID= @ID");
+                ReloadGrid();
+                ClearText();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -245,4 +245,51 @@
         lx5//dEl/riwAf6pfpizEJR6FgW7H3snY6Hj/gttRprrYIq8RAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        9O8A/+8F9i+sEigExiw0cwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
