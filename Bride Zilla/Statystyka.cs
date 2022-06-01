@@ -31,9 +31,19 @@ namespace Bride_Zilla
         private void btnAdd_Click(object sender, EventArgs e)
         {
             DataOperations insert = new DataOperations();
-            insert.Insert("statistic", " VALUES(@ID,@year,@month,@source, @date, @qoute,@meeting,@contract,@name)");
+           
             insert.customerID = null;
-            
+            insert.year = int.Parse(txtYear.Text);
+            insert.month = int.Parse(txtMonth.Text);
+            insert.source = txtSource.Text;
+            insert.date = txtDate.Text;
+            insert.qoute = int.Parse(txtQuote.Text);
+            insert.meeting = comMeeting.Text;
+            insert.contract = comContract.Text;
+            insert.name = txtName.Text;
+
+            insert.Insert("statistic", " VALUES(@ID,@year,@month,@source, @date, @qoute,@meeting,@contract,@name)");
+            ReloadGrid();
         }
     }
 }
