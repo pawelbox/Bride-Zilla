@@ -34,5 +34,11 @@ namespace Bride_Zilla
             Koszty koszty = new Koszty();
             koszty.Show();
         }
+
+        private void statystykaZapytańToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Statystyka statystyka = new Statystyka();
+            statystyka.Show();
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace Bride_Zilla
             this.rachunekKlientaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.księgowośćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kosztyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statystykaZapytańToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@ namespace Bride_Zilla
             // 
             this.klieciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kartaKlientaToolStripMenuItem,
-            this.rachunekKlientaToolStripMenuItem});
+            this.rachunekKlientaToolStripMenuItem,
+            this.statystykaZapytańToolStripMenuItem});
             this.klieciToolStripMenuItem.Name = "klieciToolStripMenuItem";
             this.klieciToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.klieciToolStripMenuItem.Text = "Klieci";
@@ -83,9 +85,16 @@ namespace Bride_Zilla
             // kosztyToolStripMenuItem
             // 
             this.kosztyToolStripMenuItem.Name = "kosztyToolStripMenuItem";
-            this.kosztyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kosztyToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.kosztyToolStripMenuItem.Text = "Koszty";
             this.kosztyToolStripMenuItem.Click += new System.EventHandler(this.kosztyToolStripMenuItem_Click);
+            // 
+            // statystykaZapytańToolStripMenuItem
+            // 
+            this.statystykaZapytańToolStripMenuItem.Name = "statystykaZapytańToolStripMenuItem";
+            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statystykaZapytańToolStripMenuItem.Text = "Statystyka zapytań";
+            this.statystykaZapytańToolStripMenuItem.Click += new System.EventHandler(this.statystykaZapytańToolStripMenuItem_Click);
             // 
             // MainPage
             // 
@@ -114,6 +123,7 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem rachunekKlientaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem księgowośćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kosztyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statystykaZapytańToolStripMenuItem;
     }
 }
 

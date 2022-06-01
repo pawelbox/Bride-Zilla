@@ -71,3 +71,4 @@ C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\bin\Debug\Bride Zilla
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\bin\Debug\Bride Zilla.application
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride Zilla.exe.manifest
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride Zilla.application
+C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Statystyka.resources

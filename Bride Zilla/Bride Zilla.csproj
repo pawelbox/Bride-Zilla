@@ -97,6 +97,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="Statystyka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statystyka.Designer.cs">
+      <DependentUpon>Statystyka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Koszty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </Compile>
     <EmbeddedResource Include="Rachunek.resx">
       <DependentUpon>Rachunek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statystyka.resx">
+      <DependentUpon>Statystyka.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Bride Zilla_TemporaryKey.pfx" />
     <None Include="packages.config" />
