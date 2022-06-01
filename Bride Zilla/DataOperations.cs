@@ -34,6 +34,15 @@ namespace Bride_Zilla
         public int pase { get; set; }
         public string wedPaid { get; set; }
 
+        public int year { get; set; }
+        public int month { get; set; }
+        public string source { get; set; }
+        public string date { get; set; }
+        public int qoute { get; set; }
+        public string meeting { get; set; }
+        public string contract { get; set; }
+        public string name { get; set; }
+
         public void Insert(string table, string value)
         {
             ConnectionString connect = new ConnectionString();
@@ -63,6 +72,14 @@ namespace Bride_Zilla
             insert.Parameters.AddWithValue("@guestToPay", guestToPay);
             insert.Parameters.AddWithValue("@travel", travel);
             insert.Parameters.AddWithValue("@wedPaid", wedPaid);
+            insert.Parameters.AddWithValue("@year", year);
+            insert.Parameters.AddWithValue("@month", month);
+            insert.Parameters.AddWithValue("@source", source);
+            insert.Parameters.AddWithValue("@date", date);
+            insert.Parameters.AddWithValue("@qoute", qoute);
+            insert.Parameters.AddWithValue("@meeting", meeting);
+            insert.Parameters.AddWithValue("@contract", contract);
+            insert.Parameters.AddWithValue("@name", name);
 
             insert.Connection = connect.con;
             insert.ExecuteNonQuery();

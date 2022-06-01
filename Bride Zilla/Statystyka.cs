@@ -27,5 +27,13 @@ namespace Bride_Zilla
         {
             ReloadGrid();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            DataOperations insert = new DataOperations();
+            insert.Insert("statistic", " VALUES(@ID,@year,@month,@source, @date, @qoute,@meeting,@contract,@name)");
+            insert.customerID = null;
+            
+        }
     }
 }
