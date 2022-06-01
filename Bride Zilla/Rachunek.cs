@@ -58,6 +58,7 @@ namespace Bride_Zilla
                 txtGuestToPay.AppendText(load.guestToPay.ToString());
                 txtTravel.AppendText(load.travel.ToString());
                 txtWedPaid.AppendText(load.wedPaid.ToString());
+                txtToPay.AppendText(load.toPay.ToString());
             }
             catch (Exception)
             {

@@ -32,7 +32,7 @@ namespace Bride_Zilla
         public int guestToPay { get; set; }
         public int travel { get; set; }
         public string wedPaid { get; set; }
-
+       
         public void Insert(string table, string value)
         {
             ConnectionString connect = new ConnectionString();

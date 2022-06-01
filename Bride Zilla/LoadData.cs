@@ -28,6 +28,7 @@ namespace Bride_Zilla
         public int guestToPay { get; set; }
         public int travel { get; set; }
         public string wedPaid { get; set; }
+        public int toPay { get; set; }
 
         public void LoadGridData(string table)
         {
@@ -91,6 +92,7 @@ namespace Bride_Zilla
                     guestToPay = idata.GetInt32(10);
                     travel = idata.GetInt32(11);
                     wedPaid = idata.GetString(12);
+                    toPay = jurnal + sesion + engag + photobook + extraPhotobook + paint + prints + guestToPay + travel;
                 }
             }
             idata.Close();
