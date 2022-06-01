@@ -59,6 +59,12 @@ namespace Bride_Zilla
                 txtTravel.AppendText(load.travel.ToString());
                 txtWedPaid.AppendText(load.wedPaid.ToString());
                 txtToPay.AppendText(load.toPay.ToString());
+
+                LoadData costs = new LoadData();
+                costs.LoadCostsData("costs", customerID);
+                txtCosts.AppendText(costs.costs.ToString());
+                int profit = load.toPay - costs.costs + load.guestPaid;
+                txtProfit.AppendText(profit.ToString());
             }
             catch (Exception)
             {

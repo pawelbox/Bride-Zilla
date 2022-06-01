@@ -30,6 +30,7 @@ namespace Bride_Zilla
         public int pase { get; set; }
         public string wedPaid { get; set; }
         public int toPay { get; set; }
+        public int costs { get; set; }
 
         public void LoadGridData(string table)
         {
@@ -116,6 +117,7 @@ namespace Bride_Zilla
                     prints = idata.GetInt32(4);
                     pase = idata.GetInt32(5);
                     travel = idata.GetInt32(6);
+                    costs = photobook + extraPhotobook + paint + prints + pase + travel + costs;
                 }
                 idata.Close();
             }
