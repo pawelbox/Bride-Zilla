@@ -31,8 +31,9 @@ namespace Bride_Zilla
         public int guestPaid { get; set; }
         public int guestToPay { get; set; }
         public int travel { get; set; }
+        public int pase { get; set; }
         public string wedPaid { get; set; }
-       
+
         public void Insert(string table, string value)
         {
             ConnectionString connect = new ConnectionString();
@@ -84,7 +85,7 @@ namespace Bride_Zilla
             connect.Connect();
             connect.con.Open();
 
-            MySqlCommand update = new MySqlCommand("UPDATE " +table + value);
+            MySqlCommand update = new MySqlCommand("UPDATE " + table + value);
 
             update.Parameters.AddWithValue("@ID", ID);
             update.Parameters.AddWithValue("@bride", bride);
@@ -108,15 +109,12 @@ namespace Bride_Zilla
             update.Parameters.AddWithValue("@guestToPay", guestToPay);
             update.Parameters.AddWithValue("@travel", travel);
             update.Parameters.AddWithValue("@wedPaid", wedPaid);
+            update.Parameters.AddWithValue("@pase", pase);
 
             update.Connection = connect.con;
             update.ExecuteNonQuery();
             connect.con.Close();
         }
-        //("UPDATE " + table + " SET `ID`=@ID,`Panna młoda`=@bride,`Adres panny młodej`=@brideAdress," +
-        //    "`Telefon panny młodej`=@bridePhone,`Pan młody`=@groom,`Adres pana młodego`=@groomAdress,`Telefon pana młodego`=@groomPhone," +
-        //    "`Data ślubu`=@weddingDate,`Lokal weselny`=@weddingPlace WHERE 1");
-        
     }
 }
 
