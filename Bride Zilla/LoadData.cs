@@ -27,6 +27,7 @@ namespace Bride_Zilla
         public int guestPaid { get; set; }
         public int guestToPay { get; set; }
         public int travel { get; set; }
+        public int pase { get; set; }
         public string wedPaid { get; set; }
         public int toPay { get; set; }
 
@@ -94,8 +95,30 @@ namespace Bride_Zilla
                     wedPaid = idata.GetString(12);
                     toPay = jurnal + sesion + engag + photobook + extraPhotobook + paint + prints + guestToPay + travel;
                 }
+                idata.Close();
             }
-            idata.Close();
+        }
+        public void LoadCostsData(string table, string customerID)
+        {
+            ConnectionString connect = new ConnectionString();
+            connect.Connect();
+            connect.con.Open();
+            MySqlCommand select = new MySqlCommand("SELECT * FROM " + table + " WHERE ID=@ID", connect.con);
+            select.Parameters.AddWithValue("@ID", customerID);
+            MySqlDataReader idata = select.ExecuteReader();
+            if (idata.HasRows)
+            {
+                while (idata.Read())
+                {
+                    photobook = idata.GetInt32(1);
+                    extraPhotobook = idata.GetInt32(2);
+                    paint = idata.GetInt32(3);
+                    prints = idata.GetInt32(4);
+                    pase = idata.GetInt32(5);
+                    travel = idata.GetInt32(6);
+                }
+                idata.Close();
+            }
         }
     }
 }
