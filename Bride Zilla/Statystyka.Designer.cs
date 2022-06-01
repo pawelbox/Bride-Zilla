@@ -84,6 +84,7 @@ namespace Bride_Zilla
             this.btnEdit.Text = "Edytuj zapytanie";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -223,6 +224,7 @@ namespace Bride_Zilla
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(162, 21);
             this.txtID.TabIndex = 1;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label1
             // 

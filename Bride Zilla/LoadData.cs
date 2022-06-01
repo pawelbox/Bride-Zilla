@@ -32,6 +32,15 @@ namespace Bride_Zilla
         public int toPay { get; set; }
         public int costs { get; set; }
 
+        public int year { get; set; }
+        public int month { get; set; }
+        public string source { get; set; }
+        public string date { get; set; }
+        public int qoute { get; set; }
+        public string meeting { get; set; }
+        public string contract { get; set; }
+        public string name { get; set; }
+
         public void LoadGridData(string table)
         {
             ConnectionString connect = new ConnectionString();
@@ -120,6 +129,30 @@ namespace Bride_Zilla
                     costs = photobook + extraPhotobook + paint + prints + pase + travel + costs;
                 }
                 idata.Close();
+            }
+        }
+        public void LoadStatisticData(string table, string customerID)
+        {
+            ConnectionString connect = new ConnectionString();
+            connect.Connect();
+            connect.con.Open();
+            MySqlCommand select = new MySqlCommand("SELECT * FROM " + table + " WHERE ID=@ID", connect.con);
+            select.Parameters.AddWithValue("@ID", customerID);
+            MySqlDataReader data = select.ExecuteReader();
+            if(data.HasRows)
+            {
+                while (data.Read())
+                {
+                    year = data.GetInt32(1);
+                    month = data.GetInt32(2);
+                    source = data.GetString(3);
+                    date = data.GetString(4);
+                    qoute = data.GetInt32(5);
+                    meeting = data.GetString(6);
+                    contract = data.GetString(7);
+                    name = data.GetString(8);
+                }
+                data.Close();
             }
         }
     }
