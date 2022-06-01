@@ -86,7 +86,7 @@ namespace Bride_Zilla
             {
                 MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
         public Rachunek()
         {
@@ -141,7 +141,7 @@ namespace Bride_Zilla
                 ReloadGrid();
                 ClearText();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
