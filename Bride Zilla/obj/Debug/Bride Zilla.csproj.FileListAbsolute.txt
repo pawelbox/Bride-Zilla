@@ -66,3 +66,4 @@ C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride Zilla
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride Zilla.csproj.CopyComplete
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride Zilla.exe
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride Zilla.pdb
+C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Koszty.resources

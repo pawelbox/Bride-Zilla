@@ -28,5 +28,11 @@ namespace Bride_Zilla
             Rachunek rachunek = new Rachunek();
             rachunek.Show();
         }
+
+        private void kosztyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Koszty koszty = new Koszty();
+            koszty.Show();
+        }
     }
 }

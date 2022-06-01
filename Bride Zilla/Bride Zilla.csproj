@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="Koszty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Koszty.Designer.cs">
+      <DependentUpon>Koszty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rachunek.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="DataOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Koszty.resx">
+      <DependentUpon>Koszty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
