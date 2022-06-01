@@ -68,17 +68,24 @@ namespace Bride_Zilla
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-             Update(" SET `ID`=@ID,`Rok`=@year,`Miesiąc`=@month,`Źródło`=@source,`Data ślubu`=@date," +
-                "`Kwota oferty`=@quote,`Spotkanie`=@meeting,`Umowa`=@contract,`Dane`=@name WHERE ID=@ID");
+            Update(" SET `ID`=@ID,`Rok`=@year,`Miesiąc`=@month,`Źródło`=@source,`Data ślubu`=@date," +
+               "`Kwota oferty`=@quote,`Spotkanie`=@meeting,`Umowa`=@contract,`Dane`=@name WHERE ID=@ID");
             ReloadGrid();
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            if (txtID.Text.Length >=4)
+            if (txtID.Text.Length >= 4)
             {
                 LoadData load = new LoadData();
-                
+
+                load.LoadStatisticData("statistic", txtID.Text);
+                txtYear.AppendText(load.year.ToString());
+                txtMonth.AppendText(load.month.ToString());
+                txtSource.AppendText(load.source);
+                txtQuote.AppendText(load.qoute.ToString());
+                txtName.AppendText(load.name);
+                txtDate.AppendText(load.date);
             }
         }
     }
