@@ -8,9 +8,9 @@ namespace Bride_Zilla
     {
         //Just add your MySql Connection data here
         public string server = "sql70.lh.pl";
-        public string database = "serwer117140_customer";
-        public string uid = "serwer117140_customer";
-        public string pwd = "!Trudne021";
+        public string database = "88888888888";
+        public string uid = "888888";
+        public string pwd = "*****";
         public MySql.Data.MySqlClient.MySqlConnection con { get; set; }
         public void Connect()
         {
