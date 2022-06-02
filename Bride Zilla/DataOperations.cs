@@ -35,7 +35,7 @@ namespace Bride_Zilla
         public string wedPaid { get; set; }
 
         public int year { get; set; }
-        public int month { get; set; }
+        public string month { get; set; }
         public string source { get; set; }
         public string date { get; set; }
         public int qoute { get; set; }
@@ -127,6 +127,15 @@ namespace Bride_Zilla
             update.Parameters.AddWithValue("@travel", travel);
             update.Parameters.AddWithValue("@wedPaid", wedPaid);
             update.Parameters.AddWithValue("@pase", pase);
+
+            update.Parameters.AddWithValue("@year", year);
+            update.Parameters.AddWithValue("@month", month);
+            update.Parameters.AddWithValue("@source", source);
+            update.Parameters.AddWithValue("@date", date);
+            update.Parameters.AddWithValue("@qoute", qoute);
+            update.Parameters.AddWithValue("@meeting", meeting);
+            update.Parameters.AddWithValue("@contract", contract);
+            update.Parameters.AddWithValue("@name", name);
 
             update.Connection = connect.con;
             update.ExecuteNonQuery();

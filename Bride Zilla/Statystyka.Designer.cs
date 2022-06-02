@@ -34,11 +34,16 @@ namespace Bride_Zilla
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comContract = new System.Windows.Forms.ComboBox();
+            this.comMeeting = new System.Windows.Forms.ComboBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtQuote = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSource = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMonth = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,12 +52,7 @@ namespace Bride_Zilla
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comMeeting = new System.Windows.Forms.ComboBox();
-            this.comContract = new System.Windows.Forms.ComboBox();
+            this.comSource = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,6 +105,7 @@ namespace Bride_Zilla
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.comSource);
             this.groupBox4.Controls.Add(this.comContract);
             this.groupBox4.Controls.Add(this.comMeeting);
             this.groupBox4.Controls.Add(this.txtName);
@@ -115,7 +116,6 @@ namespace Bride_Zilla
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.txtDate);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.txtSource);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.txtMonth);
             this.groupBox4.Controls.Add(this.label10);
@@ -127,6 +127,64 @@ namespace Bride_Zilla
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dane zapytania";
+            // 
+            // comContract
+            // 
+            this.comContract.FormattingEnabled = true;
+            this.comContract.Items.AddRange(new object[] {
+            "Nowe zapytanie",
+            "Tak",
+            "Nie"});
+            this.comContract.Location = new System.Drawing.Point(184, 119);
+            this.comContract.Name = "comContract";
+            this.comContract.Size = new System.Drawing.Size(153, 21);
+            this.comContract.TabIndex = 17;
+            // 
+            // comMeeting
+            // 
+            this.comMeeting.FormattingEnabled = true;
+            this.comMeeting.Items.AddRange(new object[] {
+            "Nowe zapytanie",
+            "Tak",
+            "Nie"});
+            this.comMeeting.Location = new System.Drawing.Point(184, 78);
+            this.comMeeting.Name = "comMeeting";
+            this.comMeeting.Size = new System.Drawing.Size(153, 21);
+            this.comMeeting.TabIndex = 16;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(184, 159);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(153, 21);
+            this.txtName.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(184, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Imię i nazwisko";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(184, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Umowa";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(184, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Spotkanie";
             // 
             // txtQuote
             // 
@@ -159,13 +217,6 @@ namespace Bride_Zilla
             this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 6;
             this.label8.Text = "Data ślubu";
-            // 
-            // txtSource
-            // 
-            this.txtSource.Location = new System.Drawing.Point(7, 119);
-            this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(153, 21);
-            this.txtSource.TabIndex = 5;
             // 
             // label9
             // 
@@ -235,61 +286,21 @@ namespace Bride_Zilla
             this.label1.TabIndex = 0;
             this.label1.Text = "ID klienta";
             // 
-            // label2
+            // comSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Spotkanie";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(184, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Umowa";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(184, 159);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(153, 21);
-            this.txtName.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(184, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Imię i nazwisko";
-            // 
-            // comMeeting
-            // 
-            this.comMeeting.FormattingEnabled = true;
-            this.comMeeting.Items.AddRange(new object[] {
-            "Tak",
-            "Nie"});
-            this.comMeeting.Location = new System.Drawing.Point(184, 78);
-            this.comMeeting.Name = "comMeeting";
-            this.comMeeting.Size = new System.Drawing.Size(153, 21);
-            this.comMeeting.TabIndex = 16;
-            // 
-            // comContract
-            // 
-            this.comContract.FormattingEnabled = true;
-            this.comContract.Items.AddRange(new object[] {
-            "Tak",
-            "Nie"});
-            this.comContract.Location = new System.Drawing.Point(184, 119);
-            this.comContract.Name = "comContract";
-            this.comContract.Size = new System.Drawing.Size(153, 21);
-            this.comContract.TabIndex = 17;
+            this.comSource.FormattingEnabled = true;
+            this.comSource.Items.AddRange(new object[] {
+            "Facebook",
+            "Formularz ze strony",
+            "Telefon",
+            "Mail",
+            "Targi",
+            "Portal ślubny",
+            "Inne"});
+            this.comSource.Location = new System.Drawing.Point(7, 119);
+            this.comSource.Name = "comSource";
+            this.comSource.Size = new System.Drawing.Size(153, 21);
+            this.comSource.TabIndex = 18;
             // 
             // Statystyka
             // 
@@ -325,7 +336,6 @@ namespace Bride_Zilla
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox txtSource;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txtMonth;
         private System.Windows.Forms.Label label10;
@@ -340,5 +350,6 @@ namespace Bride_Zilla
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comContract;
         private System.Windows.Forms.ComboBox comMeeting;
+        private System.Windows.Forms.ComboBox comSource;
     }
 }

@@ -1,9 +1,12 @@
 ﻿using MySqlConnector;
 using System;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Text;
 
 namespace Bride_Zilla
 {
+
     class ConnectionString
     {
         //Just add your MySql Connection data here

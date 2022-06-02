@@ -33,7 +33,7 @@ namespace Bride_Zilla
         public int costs { get; set; }
 
         public int year { get; set; }
-        public int month { get; set; }
+        public string month { get; set; }
         public string source { get; set; }
         public string date { get; set; }
         public int qoute { get; set; }
@@ -144,7 +144,7 @@ namespace Bride_Zilla
                 while (data.Read())
                 {
                     year = data.GetInt32(1);
-                    month = data.GetInt32(2);
+                    month = data.GetString(2);
                     source = data.GetString(3);
                     date = data.GetString(4);
                     qoute = data.GetInt32(5);

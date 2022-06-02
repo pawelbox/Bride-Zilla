@@ -12,14 +12,23 @@ namespace Bride_Zilla
 {
     public partial class Statystyka : Form
     {
+        public void ClearText()
+        {
+            txtYear.Clear();
+            txtDate.Clear();
+            txtMonth.Clear();
+            txtName.Clear();
+            txtQuote.Clear();
+            
+        }
         public void Insert(string value)
         {
             DataOperations insert = new DataOperations();
 
             insert.customerID = null;
             insert.year = int.Parse(txtYear.Text);
-            insert.month = int.Parse(txtMonth.Text);
-            insert.source = txtSource.Text;
+            insert.month = txtMonth.Text;
+            insert.source = comSource.Text;
             insert.date = txtDate.Text;
             insert.qoute = int.Parse(txtQuote.Text);
             insert.meeting = comMeeting.Text;
@@ -33,8 +42,8 @@ namespace Bride_Zilla
 
             edit.ID = int.Parse(txtID.Text);
             edit.year = int.Parse(txtYear.Text);
-            edit.month = int.Parse(txtMonth.Text);
-            edit.source = txtSource.Text;
+            edit.month = txtMonth.Text;
+            edit.source = comSource.Text;
             edit.date = txtDate.Text;
             edit.qoute = int.Parse(txtQuote.Text);
             edit.meeting = comMeeting.Text;
@@ -64,13 +73,15 @@ namespace Bride_Zilla
         {
             Insert(" VALUES(@ID,@year,@month,@source, @date, @qoute,@meeting,@contract,@name)");
             ReloadGrid();
+            ClearText();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Update(" SET `ID`=@ID,`Rok`=@year,`Miesiąc`=@month,`Źródło`=@source,`Data ślubu`=@date," +
-               "`Kwota oferty`=@quote,`Spotkanie`=@meeting,`Umowa`=@contract,`Dane`=@name WHERE ID=@ID");
+               "`Kwota oferty`=@qoute,`Spotkanie`=@meeting,`Umowa`=@contract,`Dane`=@name WHERE ID=@ID");
             ReloadGrid();
+            ClearText();
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
@@ -82,7 +93,6 @@ namespace Bride_Zilla
                 load.LoadStatisticData("statistic", txtID.Text);
                 txtYear.AppendText(load.year.ToString());
                 txtMonth.AppendText(load.month.ToString());
-                txtSource.AppendText(load.source);
                 txtQuote.AppendText(load.qoute.ToString());
                 txtName.AppendText(load.name);
                 txtDate.AppendText(load.date);
