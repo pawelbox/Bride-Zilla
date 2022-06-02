@@ -133,6 +133,7 @@ namespace Bride_Zilla
                 edit.prints = int.Parse(txtPrints.Text);
                 edit.guestPaid = int.Parse(txtGuestPaid.Text);
                 edit.guestToPay = int.Parse(txtGuestToPay.Text);
+                edit.travel = int.Parse(txtTravel.Text);
                 edit.wedPaid = txtWedPaid.Text;
 
                 edit.Update("bill", " SET `ID`=@ID,`Reportaż`=@jurnal,`Sesja`=@sesion,`Sesja narzeczeńska`=@engagment," +
