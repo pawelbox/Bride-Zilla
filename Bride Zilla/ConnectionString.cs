@@ -19,7 +19,9 @@ namespace Bride_Zilla
         {
             ConnectionString connection = new ConnectionString();
             con = new MySql.Data.MySqlClient.MySqlConnection("server=" + connection.server + ";user=" + connection.uid + ";database=" + connection.database +
-                    ";password=" + connection.pwd + ";");
+             ";password=" + connection.pwd + ";");
+
+
         }
     }
 }
