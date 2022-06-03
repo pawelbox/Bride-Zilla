@@ -40,5 +40,11 @@ namespace Bride_Zilla
             Statystyka statystyka = new Statystyka();
             statystyka.Show();
         }
+
+        private void winietkiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Winietki winietki = new Winietki();
+            winietki.Show();
+        }
     }
 }

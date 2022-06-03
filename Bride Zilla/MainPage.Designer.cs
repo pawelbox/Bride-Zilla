@@ -33,9 +33,11 @@ namespace Bride_Zilla
             this.klieciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kartaKlientaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rachunekKlientaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statystykaZapytańToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.księgowośćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kosztyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statystykaZapytańToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.magazynToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.winietkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,8 @@ namespace Bride_Zilla
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.klieciToolStripMenuItem,
-            this.księgowośćToolStripMenuItem});
+            this.księgowośćToolStripMenuItem,
+            this.magazynToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
@@ -63,16 +66,23 @@ namespace Bride_Zilla
             // kartaKlientaToolStripMenuItem
             // 
             this.kartaKlientaToolStripMenuItem.Name = "kartaKlientaToolStripMenuItem";
-            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.kartaKlientaToolStripMenuItem.Text = "Karta klienta";
             this.kartaKlientaToolStripMenuItem.Click += new System.EventHandler(this.kartaKlientaToolStripMenuItem_Click);
             // 
             // rachunekKlientaToolStripMenuItem
             // 
             this.rachunekKlientaToolStripMenuItem.Name = "rachunekKlientaToolStripMenuItem";
-            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.rachunekKlientaToolStripMenuItem.Text = "Rachunek klienta";
             this.rachunekKlientaToolStripMenuItem.Click += new System.EventHandler(this.rachunekKlientaToolStripMenuItem_Click);
+            // 
+            // statystykaZapytańToolStripMenuItem
+            // 
+            this.statystykaZapytańToolStripMenuItem.Name = "statystykaZapytańToolStripMenuItem";
+            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.statystykaZapytańToolStripMenuItem.Text = "Statystyka zapytań";
+            this.statystykaZapytańToolStripMenuItem.Click += new System.EventHandler(this.statystykaZapytańToolStripMenuItem_Click);
             // 
             // księgowośćToolStripMenuItem
             // 
@@ -89,12 +99,20 @@ namespace Bride_Zilla
             this.kosztyToolStripMenuItem.Text = "Koszty";
             this.kosztyToolStripMenuItem.Click += new System.EventHandler(this.kosztyToolStripMenuItem_Click);
             // 
-            // statystykaZapytańToolStripMenuItem
+            // magazynToolStripMenuItem
             // 
-            this.statystykaZapytańToolStripMenuItem.Name = "statystykaZapytańToolStripMenuItem";
-            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.statystykaZapytańToolStripMenuItem.Text = "Statystyka zapytań";
-            this.statystykaZapytańToolStripMenuItem.Click += new System.EventHandler(this.statystykaZapytańToolStripMenuItem_Click);
+            this.magazynToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.winietkiToolStripMenuItem});
+            this.magazynToolStripMenuItem.Name = "magazynToolStripMenuItem";
+            this.magazynToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.magazynToolStripMenuItem.Text = "Magazyn";
+            // 
+            // winietkiToolStripMenuItem
+            // 
+            this.winietkiToolStripMenuItem.Name = "winietkiToolStripMenuItem";
+            this.winietkiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.winietkiToolStripMenuItem.Text = "Winietki";
+            this.winietkiToolStripMenuItem.Click += new System.EventHandler(this.winietkiToolStripMenuItem_Click);
             // 
             // MainPage
             // 
@@ -124,6 +142,8 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem księgowośćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kosztyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statystykaZapytańToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem magazynToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem winietkiToolStripMenuItem;
     }
 }
 

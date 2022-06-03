@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bride Zilla.exe" size="80784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bride Zilla.exe" size="120720">
       <assemblyIdentity name="Bride Zilla" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NUuBC7TRTyJhmF0jxErDa3SSeEuXN68sbR+O5zcO1o4=</dsig:DigestValue>
+        <dsig:DigestValue>MiiV8kZMaoGt+T3/7QzPVBNAuV62pXyT2JAMpD+VoPM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -233,13 +233,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Bride Zilla.exe.config" size="565">
+  <file name="Bride Zilla.exe.config" size="963">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KgVDbvLTnrGqv/bJep8nqNqmI3Qhdr1KgezDEArnBaw=</dsig:DigestValue>
+      <dsig:DigestValue>xlPrfieMFU8HlCQcAZV9bs8KpILkrnLHGhDSTwXGtAw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

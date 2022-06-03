@@ -9,14 +9,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Bride Zilla.exe.manifest" size="13868">
+    <dependentAssembly dependencyType="install" codebase="Bride Zilla.exe.manifest" size="13869">
       <assemblyIdentity name="Bride Zilla.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CCD2vLbZb4oTm9jyK+YBMBM7C7e0pxZcXQ2ahhYbDlY=</dsig:DigestValue>
+        <dsig:DigestValue>0rrsvkn3iF94P0HlN2g2qFLN+i1kXeBuiSrF+rsbCKc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

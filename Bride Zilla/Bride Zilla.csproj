@@ -101,6 +101,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="serwer117140_customerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Winietki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winietki.Designer.cs">
+      <DependentUpon>Winietki.cs</DependentUpon>
+    </Compile>
     <Compile Include="Statystyka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +170,9 @@
     <EmbeddedResource Include="Statystyka.resx">
       <DependentUpon>Statystyka.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Winietki.resx">
+      <DependentUpon>Winietki.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Bride Zilla_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -170,6 +184,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="serwer117140_customerDataSet.xsc">
+      <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="serwer117140_customerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>serwer117140_customerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="serwer117140_customerDataSet.xss">
+      <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
