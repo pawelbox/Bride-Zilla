@@ -42,17 +42,19 @@ namespace Bride_Zilla
             this.paseTableAdapter = new Bride_Zilla.serwer117140_customerDataSetTableAdapters.paseTableAdapter();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txt21pod = new System.Windows.Forms.TextBox();
+            this.txtAV = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt21poj = new System.Windows.Forms.TextBox();
+            this.txtReserv = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt30pod = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt30poj = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.txtRemove = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serwer117140_customerDataSet)).BeginInit();
@@ -134,20 +136,22 @@ namespace Bride_Zilla
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(127, 39);
             this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Dodaj na stan";
+            this.btnAdd.Text = "Zmień stan";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.txt21pod);
+            this.groupBox4.Controls.Add(this.txtRemove);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.txtAV);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.txt21poj);
+            this.groupBox4.Controls.Add(this.txtReserv);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.txt30pod);
+            this.groupBox4.Controls.Add(this.txtState);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.txt30poj);
+            this.groupBox4.Controls.Add(this.txtSize);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.txtID);
             this.groupBox4.Controls.Add(this.label11);
@@ -158,69 +162,69 @@ namespace Bride_Zilla
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dodatki";
             // 
-            // txt21pod
+            // txtAV
             // 
-            this.txt21pod.Location = new System.Drawing.Point(184, 77);
-            this.txt21pod.Name = "txt21pod";
-            this.txt21pod.Size = new System.Drawing.Size(153, 21);
-            this.txt21pod.TabIndex = 9;
+            this.txtAV.Location = new System.Drawing.Point(184, 77);
+            this.txtAV.Name = "txtAV";
+            this.txtAV.Size = new System.Drawing.Size(153, 21);
+            this.txtAV.TabIndex = 9;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(184, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 13);
+            this.label12.Size = new System.Drawing.Size(54, 13);
             this.label12.TabIndex = 8;
-            this.label12.Text = "15x21 podwójne";
+            this.label12.Text = "Dostępne";
             // 
-            // txt21poj
+            // txtReserv
             // 
-            this.txt21poj.Location = new System.Drawing.Point(184, 37);
-            this.txt21poj.Name = "txt21poj";
-            this.txt21poj.Size = new System.Drawing.Size(153, 21);
-            this.txt21poj.TabIndex = 7;
+            this.txtReserv.Location = new System.Drawing.Point(184, 37);
+            this.txtReserv.Name = "txtReserv";
+            this.txtReserv.Size = new System.Drawing.Size(153, 21);
+            this.txtReserv.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(184, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 13);
+            this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 6;
-            this.label8.Text = "15x21 pojedyncze";
+            this.label8.Text = "Rezerwacja";
             // 
-            // txt30pod
+            // txtState
             // 
-            this.txt30pod.Location = new System.Drawing.Point(7, 119);
-            this.txt30pod.Name = "txt30pod";
-            this.txt30pod.Size = new System.Drawing.Size(153, 21);
-            this.txt30pod.TabIndex = 5;
+            this.txtState.Location = new System.Drawing.Point(7, 119);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(153, 21);
+            this.txtState.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(7, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 13);
+            this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 4;
-            this.label9.Text = "15x30 podwójne";
+            this.label9.Text = "Stan";
             // 
-            // txt30poj
+            // txtSize
             // 
-            this.txt30poj.Location = new System.Drawing.Point(7, 79);
-            this.txt30poj.Name = "txt30poj";
-            this.txt30poj.Size = new System.Drawing.Size(153, 21);
-            this.txt30poj.TabIndex = 3;
+            this.txtSize.Location = new System.Drawing.Point(7, 79);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(153, 21);
+            this.txtSize.TabIndex = 3;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(7, 62);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.Size = new System.Drawing.Size(81, 13);
             this.label10.TabIndex = 2;
-            this.label10.Text = "15x30 pojedyncze";
+            this.label10.Text = "Rodzaj winietki";
             // 
             // txtID
             // 
@@ -228,6 +232,7 @@ namespace Bride_Zilla
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(153, 21);
             this.txtID.TabIndex = 1;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label11
             // 
@@ -238,22 +243,38 @@ namespace Bride_Zilla
             this.label11.TabIndex = 0;
             this.label11.Text = "ID";
             // 
-            // button1
+            // btnChange
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(431, 458);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 39);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Dodaj pozycję";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnChange.BackColor = System.Drawing.Color.White;
+            this.btnChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnChange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
+            this.btnChange.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChange.Location = new System.Drawing.Point(145, 458);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(127, 39);
+            this.btnChange.TabIndex = 18;
+            this.btnChange.Text = "Usuń ze stanu";
+            this.btnChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChange.UseVisualStyleBackColor = false;
+            this.btnChange.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtRemove
+            // 
+            this.txtRemove.Location = new System.Drawing.Point(184, 119);
+            this.txtRemove.Name = "txtRemove";
+            this.txtRemove.Size = new System.Drawing.Size(153, 21);
+            this.txtRemove.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(184, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Zużyte";
             // 
             // Winietki
             // 
@@ -261,7 +282,7 @@ namespace Bride_Zilla
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(570, 509);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
@@ -292,16 +313,18 @@ namespace Bride_Zilla
         private System.Windows.Forms.DataGridViewTextBoxColumn dostępneDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.TextBox txt21pod;
+        public System.Windows.Forms.TextBox txtAV;
         private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.TextBox txt21poj;
+        public System.Windows.Forms.TextBox txtReserv;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox txt30pod;
+        public System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox txt30poj;
+        public System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChange;
+        public System.Windows.Forms.TextBox txtRemove;
+        private System.Windows.Forms.Label label1;
     }
 }

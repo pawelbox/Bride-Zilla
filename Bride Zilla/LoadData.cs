@@ -41,6 +41,11 @@ namespace Bride_Zilla
         public string contract { get; set; }
         public string name { get; set; }
 
+        public string size { get; set; }
+        public int estate { get; set; }
+        public int reserv { get; set; }
+        public int av { get; set; }
+
         public void LoadGridData(string table)
         {
             ConnectionString connect = new ConnectionString();
@@ -153,6 +158,25 @@ namespace Bride_Zilla
                     name = data.GetString(8);
                 }
                 data.Close();
+            }
+        }
+        public void LoadPaseData(string table, string customerID)
+        {
+            ConnectionString connect = new ConnectionString();
+            connect.Connect();
+            connect.con.Open();
+            MySqlCommand select = new MySqlCommand("SELECT * FROM " + table + " WHERE ID=@ID", connect.con);
+            select.Parameters.AddWithValue("@ID", customerID);
+            MySqlDataReader data = select.ExecuteReader();
+            if (data.HasRows)
+            {
+                while (data.Read())
+                {
+                    size = data.GetString(1);
+                    estate = data.GetInt32(2);
+                    reserv = data.GetInt32(3);
+                    av = data.GetInt32(4);
+                }
             }
         }
     }
