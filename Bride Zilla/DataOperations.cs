@@ -43,13 +43,13 @@ namespace Bride_Zilla
         public string contract { get; set; }
         public string name { get; set; }
 
-        public void Insert(string table, string value)
+        public void Insert(string command,string table, string value)
         {
             ConnectionString connect = new ConnectionString();
             connect.Connect();
             connect.con.Open();
 
-            MySqlCommand insert = new MySqlCommand("INSERT INTO " + table + value);
+            MySqlCommand insert = new MySqlCommand(command + table + value);
 
             insert.Parameters.AddWithValue("@ID", customerID);
             insert.Parameters.AddWithValue("@bride", bride);

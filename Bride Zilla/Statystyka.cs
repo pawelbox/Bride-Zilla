@@ -34,7 +34,7 @@ namespace Bride_Zilla
             insert.meeting = comMeeting.Text;
             insert.contract = comContract.Text;
             insert.name = txtName.Text;
-            insert.Insert("statistic", value);
+            insert.Insert("INSERT INTO ","statistic", value);
         }
         public void Update(string value)
         {

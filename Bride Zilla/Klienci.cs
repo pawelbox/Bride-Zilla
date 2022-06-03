@@ -73,9 +73,9 @@ namespace Bride_Zilla
                 insert.weddingDate = txtDate.Text;
                 insert.weddingPlace = txtPlace.Text;
 
-                insert.Insert("customers", " VALUES(@ID,@bride,@brideAdress,@bridePhone, @groom, @groomAdress,@groomPhone,@weddingDate,@weddingPlace)");
-                insert.Insert("bill", " VALUES(@ID,'0','0','0','Nie','0','0','0','0','0','0','0','Nie')");
-                insert.Insert("costs", " VALUES(@ID,'0','0','0','0','0','0')");
+                insert.Insert("INSERT INTO ","customers", " VALUES(@ID,@bride,@brideAdress,@bridePhone, @groom, @groomAdress,@groomPhone,@weddingDate,@weddingPlace)");
+                insert.Insert("INSERT INTO ","bill", " VALUES(@ID,'0','0','0','Nie','0','0','0','0','0','0','0','Nie')");
+                insert.Insert("INSERT INTO ","costs", " VALUES(@ID,'0','0','0','0','0','0')");
 
                 MessageBox.Show("Utworzyłem kartotekę i rachunek dla klienta:" + txtBride.Text, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
