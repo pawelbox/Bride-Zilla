@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Bride_Zilla
 {
-  
+
     public partial class Winietki : Form
     {
         public void ClearText()
@@ -37,18 +37,25 @@ namespace Bride_Zilla
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DataOperations update = new DataOperations();
+            try
+            {
+                DataOperations update = new DataOperations();
 
-            update.ID = int.Parse(txtID.Text);
-            update.size = txtSize.Text;
-            update.estate = int.Parse(txtState.Text);
-            update.reserv = int.Parse(txtReserv.Text);
-            update.av = update.estate - update.reserv;
+                update.ID = int.Parse(txtID.Text);
+                update.size = txtSize.Text;
+                update.estate = int.Parse(txtState.Text);
+                update.reserv = int.Parse(txtReserv.Text);
+                update.av = update.estate - update.reserv;
 
-            update.Update("pase", " SET `ID`=@ID,`Rodzaj`=@size,`Stan`=@estate,`Zarezerwowane`=@reserv,`Dostępne`=@av WHERE ID=@ID");
-            this.paseTableAdapter.Update(this.serwer117140_customerDataSet.pase);
-            this.paseTableAdapter.Fill(this.serwer117140_customerDataSet.pase);
-            ClearText();
+                update.Update("pase", " SET `ID`=@ID,`Rodzaj`=@size,`Stan`=@estate,`Zarezerwowane`=@reserv,`Dostępne`=@av WHERE ID=@ID");
+                this.paseTableAdapter.Update(this.serwer117140_customerDataSet.pase);
+                this.paseTableAdapter.Fill(this.serwer117140_customerDataSet.pase);
+                ClearText();
+            }
+            catch (Exception)
+            {
+               
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,9 +64,9 @@ namespace Bride_Zilla
             load.LoadPaseData("pase", txtID.Text);
 
             int left = load.estate - int.Parse(txtRemove.Text);
-            int lar = load.reserv- int.Parse(txtRemove.Text);
+            int lar = load.reserv - int.Parse(txtRemove.Text);
             DataOperations update = new DataOperations();
-            
+
             update.ID = int.Parse(txtID.Text);
             update.size = txtSize.Text;
             update.estate = left;
@@ -73,7 +80,7 @@ namespace Bride_Zilla
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            if (txtID.Text.Length >=1)
+            if (txtID.Text.Length >= 1)
             {
                 ClearText();
                 LoadData load = new LoadData();
@@ -83,7 +90,7 @@ namespace Bride_Zilla
                 txtReserv.AppendText(load.reserv.ToString());
                 txtAV.AppendText(load.av.ToString());
             }
-           
+
         }
     }
 }
