@@ -38,6 +38,7 @@ namespace Bride_Zilla
             this.kosztyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.magazynToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.winietkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voucheryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,8 @@ namespace Bride_Zilla
             this.klieciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kartaKlientaToolStripMenuItem,
             this.rachunekKlientaToolStripMenuItem,
-            this.statystykaZapytańToolStripMenuItem});
+            this.statystykaZapytańToolStripMenuItem,
+            this.voucheryToolStripMenuItem});
             this.klieciToolStripMenuItem.Name = "klieciToolStripMenuItem";
             this.klieciToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.klieciToolStripMenuItem.Text = "Klieci";
@@ -66,21 +68,21 @@ namespace Bride_Zilla
             // kartaKlientaToolStripMenuItem
             // 
             this.kartaKlientaToolStripMenuItem.Name = "kartaKlientaToolStripMenuItem";
-            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kartaKlientaToolStripMenuItem.Text = "Karta klienta";
             this.kartaKlientaToolStripMenuItem.Click += new System.EventHandler(this.kartaKlientaToolStripMenuItem_Click);
             // 
             // rachunekKlientaToolStripMenuItem
             // 
             this.rachunekKlientaToolStripMenuItem.Name = "rachunekKlientaToolStripMenuItem";
-            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rachunekKlientaToolStripMenuItem.Text = "Rachunek klienta";
             this.rachunekKlientaToolStripMenuItem.Click += new System.EventHandler(this.rachunekKlientaToolStripMenuItem_Click);
             // 
             // statystykaZapytańToolStripMenuItem
             // 
             this.statystykaZapytańToolStripMenuItem.Name = "statystykaZapytańToolStripMenuItem";
-            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statystykaZapytańToolStripMenuItem.Text = "Statystyka zapytań";
             this.statystykaZapytańToolStripMenuItem.Click += new System.EventHandler(this.statystykaZapytańToolStripMenuItem_Click);
             // 
@@ -110,9 +112,16 @@ namespace Bride_Zilla
             // winietkiToolStripMenuItem
             // 
             this.winietkiToolStripMenuItem.Name = "winietkiToolStripMenuItem";
-            this.winietkiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.winietkiToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.winietkiToolStripMenuItem.Text = "Winietki";
             this.winietkiToolStripMenuItem.Click += new System.EventHandler(this.winietkiToolStripMenuItem_Click);
+            // 
+            // voucheryToolStripMenuItem
+            // 
+            this.voucheryToolStripMenuItem.Name = "voucheryToolStripMenuItem";
+            this.voucheryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.voucheryToolStripMenuItem.Text = "Vouchery";
+            this.voucheryToolStripMenuItem.Click += new System.EventHandler(this.voucheryToolStripMenuItem_Click);
             // 
             // MainPage
             // 
@@ -144,6 +153,7 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem statystykaZapytańToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem magazynToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem winietkiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voucheryToolStripMenuItem;
     }
 }
 

@@ -3,7 +3,7 @@
   <assemblyIdentity name="Bride Zilla.application" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="Bride Zilla" asmv2:product="Bride Zilla" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true">
-    <deploymentProvider codebase="http://i7/Bride%20Zilla/Bride%20Zilla.application" />
+    <deploymentProvider codebase="http://desktop-q3goja8/Bride%20Zilla/Bride%20Zilla.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
@@ -16,7 +16,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+OyCvqVBSTj4EbGAZ7wYKYY5W2Hf6rBqA1J3cnuTN5s=</dsig:DigestValue>
+        <dsig:DigestValue>IAviAtXnbS7cWEQoW2wNaxnkdiAuvyBxhs0/mGlT+wE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

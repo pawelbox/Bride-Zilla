@@ -80,3 +80,4 @@ C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride Zilla.exe.ma
 C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride Zilla.application
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Winietki.resources
 C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Winietki.resources
+C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Voucher.resources

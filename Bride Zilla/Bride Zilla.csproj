@@ -106,6 +106,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher.Designer.cs">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Winietki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statystyka.resx">
       <DependentUpon>Statystyka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher.resx">
+      <DependentUpon>Voucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Winietki.resx">
       <DependentUpon>Winietki.cs</DependentUpon>

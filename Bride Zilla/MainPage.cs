@@ -46,5 +46,11 @@ namespace Bride_Zilla
             Winietki winietki = new Winietki();
             winietki.Show();
         }
+
+        private void voucheryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Voucher voucher = new Voucher();
+            voucher.Show();
+        }
     }
 }
