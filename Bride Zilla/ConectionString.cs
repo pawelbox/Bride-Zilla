@@ -7,8 +7,8 @@ namespace WindowsFormsApp1
     {
         public string server = "sql70.lh.pl";
         public string database = "serwer117140_customer";
-        public string uid = "serwer117140_customer";
-        public string pwd = "!Trudne021";
+        public string uid = "*********";
+        public string pwd = "********";
         public MySqlConnection con { get; set; }
         public void Connect()
         {
