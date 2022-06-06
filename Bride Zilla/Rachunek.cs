@@ -36,6 +36,7 @@ namespace Bride_Zilla
             txtToPay.Clear();
             txtBride.Clear();
             txtGroom.Clear();
+            txtCosts.Clear();
         }
         public void LoadBill()
         {
