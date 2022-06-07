@@ -165,7 +165,7 @@ namespace Bride_Zilla
             invoice.guestToPay = int.Parse(txtGuestToPay.Text);
             invoice.travel = int.Parse(txtTravel.Text);
             invoice.toPay = int.Parse(txtToPay.Text);
-            invoice.SaveInvoice(txtBride.Text + " i " + txtGroom.Text + ".txt");
+            invoice.SaveInvoice(@"C:\Faktury\" + txtBride.Text + " i " + txtGroom.Text + ".txt");
         }
     }
 }
