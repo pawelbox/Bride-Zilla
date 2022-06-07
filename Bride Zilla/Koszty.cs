@@ -71,8 +71,9 @@ namespace Bride_Zilla
             update.prints = int.Parse(txtPrints.Text);
             update.pase = int.Parse(txtPase.Text);
             update.travel = int.Parse(txtTravel.Text);
+            update.pendrive = int.Parse(txtPen.Text);
             update.Update("costs", " SET `ID`=@ID,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints," +
-                "`Winietki`=@pase,`Paliwo`=@travel WHERE ID= @ID");
+                "`Winietki`=@pase,`Paliwo`=@travel,'Pendrive'=@pendrive WHERE ID= @ID");
             ClearText();
             ReloadGrid();
         }

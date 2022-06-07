@@ -53,11 +53,54 @@ namespace Bride_Zilla
                 ReloadGrid();
                 ClearText();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-          
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataOperations edit = new DataOperations();
+
+                edit.ID = int.Parse(txtID.Text);
+                edit.name = txtName.Text;
+                edit.customerID = txtID.Text;
+                edit.type = comType.Text;
+                edit.content = txtContent.Text;
+                edit.expired = txtExpired.Text;
+                edit.price = int.Parse(txtPrice.Text);
+                edit.realised = comRealised.Text;
+                edit.Update("voucher", " SET `ID`=@ID,`Na kogo`=@name,`Rodzaj`=@type,`Zawartość`=@content," +
+                            "`Cena`=@price,`Ważność`=@expired,`Zrealizowany`=@realised WHERE ID= @ID");
+                ReloadGrid();
+                ClearText();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadData load = new LoadData();
+                load.LoadVoucherData("voucher", txtID.Text);
+
+                txtName.AppendText(load.name);
+                txtContent.AppendText(load.content);
+                txtExpired.AppendText(load.expired);
+                txtPrice.AppendText(load.price.ToString());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

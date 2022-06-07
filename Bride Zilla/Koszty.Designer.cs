@@ -33,6 +33,8 @@ namespace Bride_Zilla
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtPase = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtTravel = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPrints = new System.Windows.Forms.TextBox();
@@ -51,8 +53,8 @@ namespace Bride_Zilla
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPase = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtPen = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +91,8 @@ namespace Bride_Zilla
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtPen);
+            this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.txtPase);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.txtTravel);
@@ -108,6 +112,22 @@ namespace Bride_Zilla
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dodatki";
             // 
+            // txtPase
+            // 
+            this.txtPase.Location = new System.Drawing.Point(174, 119);
+            this.txtPase.Name = "txtPase";
+            this.txtPase.Size = new System.Drawing.Size(153, 21);
+            this.txtPase.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(174, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Winietki";
+            // 
             // txtTravel
             // 
             this.txtTravel.Location = new System.Drawing.Point(174, 78);
@@ -120,7 +140,7 @@ namespace Bride_Zilla
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(174, 62);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 8;
             this.label12.Text = "Dojazd";
             // 
@@ -152,7 +172,7 @@ namespace Bride_Zilla
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(7, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 4;
             this.label9.Text = "Obrazy";
             // 
@@ -168,7 +188,7 @@ namespace Bride_Zilla
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(7, 62);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 13);
+            this.label10.Size = new System.Drawing.Size(100, 13);
             this.label10.TabIndex = 2;
             this.label10.Text = "Albumy dodatkowe";
             // 
@@ -213,7 +233,7 @@ namespace Bride_Zilla
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Pan młody";
             // 
@@ -229,7 +249,7 @@ namespace Bride_Zilla
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Panna młoda";
             // 
@@ -260,21 +280,21 @@ namespace Bride_Zilla
             this.label1.TabIndex = 0;
             this.label1.Text = "ID klienta";
             // 
-            // txtPase
+            // txtPen
             // 
-            this.txtPase.Location = new System.Drawing.Point(174, 119);
-            this.txtPase.Name = "txtPase";
-            this.txtPase.Size = new System.Drawing.Size(153, 21);
-            this.txtPase.TabIndex = 11;
+            this.txtPen.Location = new System.Drawing.Point(7, 159);
+            this.txtPen.Name = "txtPen";
+            this.txtPen.Size = new System.Drawing.Size(153, 21);
+            this.txtPen.TabIndex = 13;
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(174, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Winietki";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Pendrive";
             // 
             // Koszty
             // 
@@ -328,5 +348,7 @@ namespace Bride_Zilla
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtPen;
+        private System.Windows.Forms.Label label5;
     }
 }

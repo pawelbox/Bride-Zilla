@@ -46,6 +46,12 @@ namespace Bride_Zilla
         public int reserv { get; set; }
         public int av { get; set; }
 
+        public string type { get; set; }
+        public string content { get; set; }
+        public string expired { get; set; }
+        public string realised { get; set; }
+        public int price { get; set; }
+
         public void LoadGridData(string table)
         {
             ConnectionString connect = new ConnectionString();
@@ -176,6 +182,27 @@ namespace Bride_Zilla
                     estate = data.GetInt32(2);
                     reserv = data.GetInt32(3);
                     av = data.GetInt32(4);
+                }
+            }
+        }
+        public void LoadVoucherData(string table, string customerID)
+        {
+            ConnectionString connect = new ConnectionString();
+            connect.Connect();
+            connect.con.Open();
+            MySqlCommand select = new MySqlCommand("SELECT * FROM " + table + " WHERE ID=@ID", connect.con);
+            select.Parameters.AddWithValue("@ID", customerID);
+            MySqlDataReader data = select.ExecuteReader();
+            if (data.HasRows)
+            {
+                while (data.Read())
+                {
+                    name = data.GetString(1);
+                    type = data.GetString(2);
+                    content = data.GetString(3);
+                    price = data.GetInt32(4);
+                    expired = data.GetString(5);
+                    realised = data.GetString(6);
                 }
             }
         }

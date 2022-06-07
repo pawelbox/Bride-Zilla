@@ -32,6 +32,11 @@ namespace Bride_Zilla
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Voucher));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comType = new System.Windows.Forms.ComboBox();
+            this.comRealised = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtExpired = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtContent = new System.Windows.Forms.TextBox();
@@ -41,11 +46,6 @@ namespace Bride_Zilla
             this.label10 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtExpired = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comRealised = new System.Windows.Forms.ComboBox();
-            this.comType = new System.Windows.Forms.ComboBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,6 +87,59 @@ namespace Bride_Zilla
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dodatki";
             // 
+            // comType
+            // 
+            this.comType.FormattingEnabled = true;
+            this.comType.Items.AddRange(new object[] {
+            "We dwoje",
+            "Rodzinna",
+            "Ciążowa",
+            "Portretowa",
+            "Indywidualna",
+            "Inna"});
+            this.comType.Location = new System.Drawing.Point(7, 119);
+            this.comType.Name = "comType";
+            this.comType.Size = new System.Drawing.Size(153, 21);
+            this.comType.TabIndex = 14;
+            // 
+            // comRealised
+            // 
+            this.comRealised.FormattingEnabled = true;
+            this.comRealised.Items.AddRange(new object[] {
+            "Tak",
+            "Nie"});
+            this.comRealised.Location = new System.Drawing.Point(343, 37);
+            this.comRealised.Name = "comRealised";
+            this.comRealised.Size = new System.Drawing.Size(121, 21);
+            this.comRealised.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lato", 8.25F);
+            this.label2.Location = new System.Drawing.Point(340, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Zrealizowany";
+            // 
+            // txtExpired
+            // 
+            this.txtExpired.Location = new System.Drawing.Point(175, 119);
+            this.txtExpired.Name = "txtExpired";
+            this.txtExpired.Size = new System.Drawing.Size(153, 21);
+            this.txtExpired.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lato", 8.25F);
+            this.label1.Location = new System.Drawing.Point(175, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Termin ważności";
+            // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(175, 77);
@@ -100,7 +153,7 @@ namespace Bride_Zilla
             this.label12.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label12.Location = new System.Drawing.Point(175, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.Size = new System.Drawing.Size(33, 13);
             this.label12.TabIndex = 8;
             this.label12.Text = "Cena";
             // 
@@ -117,7 +170,7 @@ namespace Bride_Zilla
             this.label8.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label8.Location = new System.Drawing.Point(175, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 6;
             this.label8.Text = "Zawartość";
             // 
@@ -127,7 +180,7 @@ namespace Bride_Zilla
             this.label9.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label9.Location = new System.Drawing.Point(7, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 4;
             this.label9.Text = "Typ sesji";
             // 
@@ -154,6 +207,7 @@ namespace Bride_Zilla
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(153, 21);
             this.txtID.TabIndex = 1;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label11
             // 
@@ -164,59 +218,6 @@ namespace Bride_Zilla
             this.label11.Size = new System.Drawing.Size(18, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "ID";
-            // 
-            // txtExpired
-            // 
-            this.txtExpired.Location = new System.Drawing.Point(175, 119);
-            this.txtExpired.Name = "txtExpired";
-            this.txtExpired.Size = new System.Drawing.Size(153, 21);
-            this.txtExpired.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato", 8.25F);
-            this.label1.Location = new System.Drawing.Point(175, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Termin ważności";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lato", 8.25F);
-            this.label2.Location = new System.Drawing.Point(340, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Zrealizowany";
-            // 
-            // comRealised
-            // 
-            this.comRealised.FormattingEnabled = true;
-            this.comRealised.Items.AddRange(new object[] {
-            "Tak",
-            "Nie"});
-            this.comRealised.Location = new System.Drawing.Point(343, 37);
-            this.comRealised.Name = "comRealised";
-            this.comRealised.Size = new System.Drawing.Size(121, 21);
-            this.comRealised.TabIndex = 13;
-            // 
-            // comType
-            // 
-            this.comType.FormattingEnabled = true;
-            this.comType.Items.AddRange(new object[] {
-            "We dwoje",
-            "Rodzinna",
-            "Ciążowa",
-            "Portretowa",
-            "Indywidualna",
-            "Inna"});
-            this.comType.Location = new System.Drawing.Point(7, 119);
-            this.comType.Name = "comType";
-            this.comType.Size = new System.Drawing.Size(153, 21);
-            this.comType.TabIndex = 14;
             // 
             // btnEdit
             // 
@@ -234,6 +235,7 @@ namespace Bride_Zilla
             this.btnEdit.Text = "Edytuj voucher";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -264,6 +266,7 @@ namespace Bride_Zilla
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Lato", 8.25F);
             this.Name = "Voucher";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voucher";
             this.Load += new System.EventHandler(this.Voucher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

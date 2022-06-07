@@ -33,6 +33,7 @@ namespace Bride_Zilla
         public int travel { get; set; }
         public int pase { get; set; }
         public string wedPaid { get; set; }
+        public int pendrive { get; set; }
 
         public int year { get; set; }
         public string month { get; set; }
@@ -144,6 +145,7 @@ namespace Bride_Zilla
             update.Parameters.AddWithValue("@travel", travel);
             update.Parameters.AddWithValue("@wedPaid", wedPaid);
             update.Parameters.AddWithValue("@pase", pase);
+            update.Parameters.AddWithValue("@pendrive", pendrive);
 
             update.Parameters.AddWithValue("@year", year);
             update.Parameters.AddWithValue("@month", month);
@@ -158,6 +160,12 @@ namespace Bride_Zilla
             update.Parameters.AddWithValue("@estate", estate);
             update.Parameters.AddWithValue("@reserv", reserv);
             update.Parameters.AddWithValue("@av", estate-reserv);
+
+            update.Parameters.AddWithValue("@type", type);
+            update.Parameters.AddWithValue("@price", price);
+            update.Parameters.AddWithValue("@content", content);
+            update.Parameters.AddWithValue("@expired", expired);
+            update.Parameters.AddWithValue("@realised", realised);
 
             update.Connection = connect.con;
             update.ExecuteNonQuery();
