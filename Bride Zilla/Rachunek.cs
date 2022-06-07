@@ -59,8 +59,11 @@ namespace Bride_Zilla
                 txtGuestToPay.AppendText(load.guestToPay.ToString());
                 txtTravel.AppendText(load.travel.ToString());
                 txtWedPaid.AppendText(load.wedPaid.ToString());
+                if (txtWedPaid.Text.Contains("Tak"))
+                {
+                    txtWedPaid.BackColor = Color.Red;
+                }
                 txtToPay.AppendText(load.toPay.ToString());
-
                 LoadData costs = new LoadData();
                 costs.LoadCostsData("costs", customerID);
                 txtCosts.AppendText(costs.costs.ToString());
