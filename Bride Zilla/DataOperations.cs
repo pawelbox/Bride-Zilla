@@ -48,6 +48,12 @@ namespace Bride_Zilla
         public int reserv { get; set; }
         public int av { get; set; }
 
+        public string type { get; set; }
+        public string content { get; set; }
+        public string expired { get; set; }
+        public string realised { get; set; }
+        public int price { get; set; }
+
         public void Insert(string command,string table, string value)
         {
             ConnectionString connect = new ConnectionString();
@@ -85,6 +91,12 @@ namespace Bride_Zilla
             insert.Parameters.AddWithValue("@meeting", meeting);
             insert.Parameters.AddWithValue("@contract", contract);
             insert.Parameters.AddWithValue("@name", name);
+
+            insert.Parameters.AddWithValue("@type", type);
+            insert.Parameters.AddWithValue("@price", price);
+            insert.Parameters.AddWithValue("@content", content);
+            insert.Parameters.AddWithValue("@expired", expired);
+            insert.Parameters.AddWithValue("@realised", realised);
 
             insert.Connection = connect.con;
             insert.ExecuteNonQuery();
