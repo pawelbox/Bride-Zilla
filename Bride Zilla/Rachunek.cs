@@ -148,5 +148,12 @@ namespace Bride_Zilla
                 MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            Invoice invoice = new Invoice();
+            invoice.jurnal = int.Parse(txtJurnal.Text);
+            invoice.SaveInvoice(txtBride.Text + " " + txtGroom.Text + ".txt");
+        }
     }
 }

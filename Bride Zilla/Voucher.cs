@@ -18,6 +18,15 @@ namespace Bride_Zilla
             load.LoadGridData("voucher");
             dataGridView1.DataSource = load.data.Tables[0];
         }
+        public void ClearText()
+        {
+            txtContent.Clear();
+            txtExpired.Clear();
+            txtName.Clear();
+            txtPrice.Clear();
+            comRealised.Items.Clear();
+            comType.Items.Clear();
+        }
         public Voucher()
         {
             InitializeComponent();
@@ -42,6 +51,7 @@ namespace Bride_Zilla
                 add.realised = comRealised.Text;
                 add.Insert("INSERT INTO ", "voucher", " VALUES(@ID,@name,@type,@content, @price, @expired,@realised)");
                 ReloadGrid();
+                ClearText();
             }
             catch(Exception)
             {
