@@ -31,6 +31,7 @@ namespace Bride_Zilla
         public string wedPaid { get; set; }
         public int toPay { get; set; }
         public int costs { get; set; }
+        public int pendrive { get; set; }
 
         public int year { get; set; }
         public string month { get; set; }
@@ -137,7 +138,8 @@ namespace Bride_Zilla
                     prints = idata.GetInt32(4);
                     pase = idata.GetInt32(5);
                     travel = idata.GetInt32(6);
-                    costs = photobook + extraPhotobook + paint + prints + pase + travel + costs;
+                    pendrive = idata.GetInt32(7);
+                    costs = photobook + extraPhotobook + paint + prints + pase + travel + pendrive;
                 }
                 idata.Close();
             }
@@ -150,7 +152,7 @@ namespace Bride_Zilla
             MySqlCommand select = new MySqlCommand("SELECT * FROM " + table + " WHERE ID=@ID", connect.con);
             select.Parameters.AddWithValue("@ID", customerID);
             MySqlDataReader data = select.ExecuteReader();
-            if(data.HasRows)
+            if (data.HasRows)
             {
                 while (data.Read())
                 {

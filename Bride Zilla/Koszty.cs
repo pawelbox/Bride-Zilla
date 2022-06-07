@@ -15,6 +15,7 @@ namespace Bride_Zilla
             txtTravel.Clear();
             txtBride.Clear();
             txtGroom.Clear();
+            txtPen.Clear();
         }
         public void ReloadGrid()
         {
@@ -48,6 +49,7 @@ namespace Bride_Zilla
                     txtPrints.AppendText(load.prints.ToString());
                     txtPase.AppendText(load.pase.ToString());
                     txtTravel.AppendText(load.travel.ToString());
+                    txtPen.AppendText(load.pendrive.ToString());
 
                     LoadData customer = new LoadData();
                     customer.LoadCustomerData("customers", customerID);
@@ -73,7 +75,7 @@ namespace Bride_Zilla
             update.travel = int.Parse(txtTravel.Text);
             update.pendrive = int.Parse(txtPen.Text);
             update.Update("costs", " SET `ID`=@ID,`Album`=@photobook,`Albumy dodatkowe`=@extraPhoto,`Obrazy`=@paint,`Wydruki`=@prints," +
-                "`Winietki`=@pase,`Paliwo`=@travel,'Pendrive'=@pendrive WHERE ID= @ID");
+                "`Winietki`=@pase,`Paliwo`=@travel,`Pendrive`=@pendrive WHERE ID= @ID");
             ClearText();
             ReloadGrid();
         }
