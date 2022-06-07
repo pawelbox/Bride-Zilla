@@ -6,6 +6,7 @@ namespace Bride_Zilla
     class Invoice
     {
         public StreamWriter write;
+        public FileStream open;
         public string bride { get; set; }
         public string groom { get; set; }
         public int jurnal { get; set; }

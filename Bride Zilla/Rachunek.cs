@@ -152,6 +152,7 @@ namespace Bride_Zilla
         private void btnInvoice_Click(object sender, EventArgs e)
         {
             Invoice invoice = new Invoice();
+
             invoice.jurnal = int.Parse(txtJurnal.Text);
             invoice.bride = txtBride.Text;
             invoice.groom = txtGroom.Text;
@@ -164,6 +165,7 @@ namespace Bride_Zilla
             invoice.guestToPay = int.Parse(txtGuestToPay.Text);
             invoice.travel = int.Parse(txtTravel.Text);
             invoice.toPay = int.Parse(txtToPay.Text);
+            invoice.SaveInvoice(txtBride.Text + " i " + txtGroom.Text + ".txt");
         }
     }
 }
