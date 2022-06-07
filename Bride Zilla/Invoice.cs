@@ -25,7 +25,6 @@ namespace Bride_Zilla
 
             if (File.Exists(path))
             {
-                int toPay = jurnal + sesion + engagment + photobook + extraPhotobook + paint + prints + guestToPay + travel;
                 write = File.AppendText(path);
             }
             else

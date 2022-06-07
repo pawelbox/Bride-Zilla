@@ -153,7 +153,17 @@ namespace Bride_Zilla
         {
             Invoice invoice = new Invoice();
             invoice.jurnal = int.Parse(txtJurnal.Text);
-            invoice.SaveInvoice(txtBride.Text + " " + txtGroom.Text + ".txt");
+            invoice.bride = txtBride.Text;
+            invoice.groom = txtGroom.Text;
+            invoice.sesion = int.Parse(txtSesion.Text);
+            invoice.engagment = int.Parse(txtEngag.Text);
+            invoice.photobook = int.Parse(txtPhoto.Text);
+            invoice.extraPhotobook = int.Parse(txtExtraPhoto.Text);
+            invoice.paint = int.Parse(txtPaint.Text);
+            invoice.prints = int.Parse(txtPrints.Text);
+            invoice.guestToPay = int.Parse(txtGuestToPay.Text);
+            invoice.travel = int.Parse(txtTravel.Text);
+            invoice.toPay = int.Parse(txtToPay.Text);
         }
     }
 }
