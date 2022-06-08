@@ -34,11 +34,11 @@ namespace Bride_Zilla
             this.kartaKlientaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rachunekKlientaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statystykaZapytańToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voucheryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.księgowośćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kosztyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.magazynToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.winietkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voucheryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,23 +68,30 @@ namespace Bride_Zilla
             // kartaKlientaToolStripMenuItem
             // 
             this.kartaKlientaToolStripMenuItem.Name = "kartaKlientaToolStripMenuItem";
-            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.kartaKlientaToolStripMenuItem.Text = "Karta klienta";
             this.kartaKlientaToolStripMenuItem.Click += new System.EventHandler(this.kartaKlientaToolStripMenuItem_Click);
             // 
             // rachunekKlientaToolStripMenuItem
             // 
             this.rachunekKlientaToolStripMenuItem.Name = "rachunekKlientaToolStripMenuItem";
-            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.rachunekKlientaToolStripMenuItem.Text = "Rachunek klienta";
             this.rachunekKlientaToolStripMenuItem.Click += new System.EventHandler(this.rachunekKlientaToolStripMenuItem_Click);
             // 
             // statystykaZapytańToolStripMenuItem
             // 
             this.statystykaZapytańToolStripMenuItem.Name = "statystykaZapytańToolStripMenuItem";
-            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.statystykaZapytańToolStripMenuItem.Text = "Statystyka zapytań";
             this.statystykaZapytańToolStripMenuItem.Click += new System.EventHandler(this.statystykaZapytańToolStripMenuItem_Click);
+            // 
+            // voucheryToolStripMenuItem
+            // 
+            this.voucheryToolStripMenuItem.Name = "voucheryToolStripMenuItem";
+            this.voucheryToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.voucheryToolStripMenuItem.Text = "Vouchery";
+            this.voucheryToolStripMenuItem.Click += new System.EventHandler(this.voucheryToolStripMenuItem_Click);
             // 
             // księgowośćToolStripMenuItem
             // 
@@ -116,18 +123,13 @@ namespace Bride_Zilla
             this.winietkiToolStripMenuItem.Text = "Winietki";
             this.winietkiToolStripMenuItem.Click += new System.EventHandler(this.winietkiToolStripMenuItem_Click);
             // 
-            // voucheryToolStripMenuItem
-            // 
-            this.voucheryToolStripMenuItem.Name = "voucheryToolStripMenuItem";
-            this.voucheryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.voucheryToolStripMenuItem.Text = "Vouchery";
-            this.voucheryToolStripMenuItem.Click += new System.EventHandler(this.voucheryToolStripMenuItem_Click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Bride_Zilla.Properties.Resources.logo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1284, 841);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Lato", 8.25F);
