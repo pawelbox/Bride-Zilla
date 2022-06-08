@@ -52,5 +52,11 @@ namespace Bride_Zilla
             Voucher voucher = new Voucher();
             voucher.Show();
         }
+
+        private void bazaDanychMySqlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MySql mySql = new MySql();
+            mySql.Show();
+        }
     }
 }

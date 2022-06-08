@@ -39,6 +39,8 @@ namespace Bride_Zilla
             this.kosztyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.magazynToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.winietkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bazaDanychMySqlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,8 @@ namespace Bride_Zilla
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.klieciToolStripMenuItem,
             this.księgowośćToolStripMenuItem,
-            this.magazynToolStripMenuItem});
+            this.magazynToolStripMenuItem,
+            this.ustawieniaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
@@ -123,6 +126,21 @@ namespace Bride_Zilla
             this.winietkiToolStripMenuItem.Text = "Winietki";
             this.winietkiToolStripMenuItem.Click += new System.EventHandler(this.winietkiToolStripMenuItem_Click);
             // 
+            // ustawieniaToolStripMenuItem
+            // 
+            this.ustawieniaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bazaDanychMySqlToolStripMenuItem});
+            this.ustawieniaToolStripMenuItem.Name = "ustawieniaToolStripMenuItem";
+            this.ustawieniaToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.ustawieniaToolStripMenuItem.Text = "Ustawienia";
+            // 
+            // bazaDanychMySqlToolStripMenuItem
+            // 
+            this.bazaDanychMySqlToolStripMenuItem.Name = "bazaDanychMySqlToolStripMenuItem";
+            this.bazaDanychMySqlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bazaDanychMySqlToolStripMenuItem.Text = "Baza danych MySql";
+            this.bazaDanychMySqlToolStripMenuItem.Click += new System.EventHandler(this.bazaDanychMySqlToolStripMenuItem_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +174,8 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem magazynToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem winietkiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem voucheryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bazaDanychMySqlToolStripMenuItem;
     }
 }
 
