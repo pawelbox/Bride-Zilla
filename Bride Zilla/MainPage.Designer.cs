@@ -41,6 +41,7 @@ namespace Bride_Zilla
             this.winietkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bazaDanychMySqlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intalacjaTabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,8 @@ namespace Bride_Zilla
             // ustawieniaToolStripMenuItem
             // 
             this.ustawieniaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bazaDanychMySqlToolStripMenuItem});
+            this.bazaDanychMySqlToolStripMenuItem,
+            this.intalacjaTabelToolStripMenuItem});
             this.ustawieniaToolStripMenuItem.Name = "ustawieniaToolStripMenuItem";
             this.ustawieniaToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.ustawieniaToolStripMenuItem.Text = "Ustawienia";
@@ -140,6 +142,12 @@ namespace Bride_Zilla
             this.bazaDanychMySqlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bazaDanychMySqlToolStripMenuItem.Text = "Baza danych MySql";
             this.bazaDanychMySqlToolStripMenuItem.Click += new System.EventHandler(this.bazaDanychMySqlToolStripMenuItem_Click);
+            // 
+            // intalacjaTabelToolStripMenuItem
+            // 
+            this.intalacjaTabelToolStripMenuItem.Name = "intalacjaTabelToolStripMenuItem";
+            this.intalacjaTabelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.intalacjaTabelToolStripMenuItem.Text = "Intalacja tabel";
             // 
             // MainPage
             // 
@@ -176,6 +184,7 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem voucheryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bazaDanychMySqlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem intalacjaTabelToolStripMenuItem;
     }
 }
 
