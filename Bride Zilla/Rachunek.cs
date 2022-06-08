@@ -51,6 +51,14 @@ namespace Bride_Zilla
                 txtSesion.AppendText(load.sesion.ToString());
                 txtEngag.AppendText(load.engag.ToString());
                 txtEngagPaid.AppendText(load.engagPaid);
+                if (txtEngagPaid.Text.Contains("Tak"))
+                {
+                    txtEngagPaid.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    txtEngagPaid.BackColor = Color.LightPink;
+                }
                 txtPhoto.AppendText(load.photobook.ToString());
                 txtExtraPhoto.AppendText(load.extraPhotobook.ToString());
                 txtPaint.AppendText(load.paint.ToString());
@@ -61,7 +69,11 @@ namespace Bride_Zilla
                 txtWedPaid.AppendText(load.wedPaid.ToString());
                 if (txtWedPaid.Text.Contains("Tak"))
                 {
-                    txtWedPaid.BackColor = Color.Red;
+                    txtWedPaid.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    txtWedPaid.BackColor = Color.LightPink;
                 }
                 txtToPay.AppendText(load.toPay.ToString());
                 LoadData costs = new LoadData();
