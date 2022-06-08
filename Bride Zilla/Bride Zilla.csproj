@@ -100,6 +100,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BazaDanych.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BazaDanych.Designer.cs">
+      <DependentUpon>BazaDanych.cs</DependentUpon>
+    </Compile>
     <Compile Include="Read.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="Invoice.cs" />
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BazaDanych.resx">
+      <DependentUpon>BazaDanych.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

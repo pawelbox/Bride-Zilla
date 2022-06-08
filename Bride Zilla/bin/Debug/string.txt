@@ -1,1 +1,0 @@
-"server=sql70.lh.pl;user=serwer117140_customer;database=serwer117140_customer;password=!Trudne021;"

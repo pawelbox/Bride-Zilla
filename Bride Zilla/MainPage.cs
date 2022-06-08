@@ -55,7 +55,7 @@ namespace Bride_Zilla
 
         private void bazaDanychMySqlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MySql mySql = new MySql();
+            BazaDanych mySql = new BazaDanych();
             mySql.Show();
         }
     }
