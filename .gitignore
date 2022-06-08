@@ -402,6 +402,7 @@ FodyWeavers.xsd
 
 #MainFiles
 ConnectionString.cs
+string.txt
 
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio

@@ -17,9 +17,13 @@ namespace Bride_Zilla
         public MySql.Data.MySqlClient.MySqlConnection con { get; set; }
         public void Connect()
         {
+            Read red = new Read();
+            red.GetRead();
             ConnectionString connection = new ConnectionString();
-            con = new MySql.Data.MySqlClient.MySqlConnection("server=" + connection.server + ";user=" + connection.uid + ";database=" + connection.database +
-             ";password=" + connection.pwd + ";");
+            
+            con = new MySql.Data.MySqlClient.MySqlConnection(red.read);
+            //con = new MySql.Data.MySqlClient.MySqlConnection("server=" + connection.server + ";user=" + connection.uid + ";database=" + connection.database +
+            //";password=" + connection.pwd + ";");
         }
     }
 }
