@@ -401,7 +401,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 #MainFiles
-ConnectionString.cs
 string.txt
 
 ### VisualStudio Patch ###
