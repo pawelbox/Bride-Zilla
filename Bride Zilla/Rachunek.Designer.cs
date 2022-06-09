@@ -88,12 +88,13 @@ namespace Bride_Zilla
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 269);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1193, 529);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
@@ -147,7 +148,7 @@ namespace Bride_Zilla
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Pan młody";
             // 
@@ -163,7 +164,7 @@ namespace Bride_Zilla
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Panna młoda";
             // 
@@ -196,7 +197,7 @@ namespace Bride_Zilla
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(7, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 13);
+            this.label4.Size = new System.Drawing.Size(153, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Sesja narzeczeńska zapłacona";
             // 
@@ -212,7 +213,7 @@ namespace Bride_Zilla
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(7, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.Size = new System.Drawing.Size(101, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Sesja narzeczeńska";
             // 
@@ -228,7 +229,7 @@ namespace Bride_Zilla
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(7, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "Sesja";
             // 
@@ -244,7 +245,7 @@ namespace Bride_Zilla
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(7, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "Reportaż";
             // 
@@ -279,7 +280,7 @@ namespace Bride_Zilla
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(7, 183);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 8;
             this.label12.Text = "Dojazd";
             // 
@@ -311,7 +312,7 @@ namespace Bride_Zilla
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(7, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 4;
             this.label9.Text = "Obrazy";
             // 
@@ -327,7 +328,7 @@ namespace Bride_Zilla
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(7, 62);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 13);
+            this.label10.Size = new System.Drawing.Size(100, 13);
             this.label10.TabIndex = 2;
             this.label10.Text = "Albumy dodatkowe";
             // 
@@ -374,7 +375,7 @@ namespace Bride_Zilla
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(7, 104);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 13);
+            this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 4;
             this.label13.Text = "Wesele zapłacone";
             // 
@@ -390,7 +391,7 @@ namespace Bride_Zilla
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(7, 62);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 13);
+            this.label15.Size = new System.Drawing.Size(60, 13);
             this.label15.TabIndex = 2;
             this.label15.Text = "Do zapłaty";
             // 
@@ -406,7 +407,7 @@ namespace Bride_Zilla
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(7, 21);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 13);
+            this.label16.Size = new System.Drawing.Size(59, 13);
             this.label16.TabIndex = 0;
             this.label16.Text = "Zapłacone";
             // 
@@ -453,7 +454,7 @@ namespace Bride_Zilla
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(4, 62);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
+            this.label17.Size = new System.Drawing.Size(59, 13);
             this.label17.TabIndex = 2;
             this.label17.Text = "Zysk netto";
             // 
@@ -469,7 +470,7 @@ namespace Bride_Zilla
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(4, 21);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 13);
+            this.label18.Size = new System.Drawing.Size(60, 13);
             this.label18.TabIndex = 0;
             this.label18.Text = "Do zapłaty";
             // 

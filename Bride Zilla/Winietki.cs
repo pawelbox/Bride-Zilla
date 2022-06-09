@@ -45,7 +45,12 @@ namespace Bride_Zilla
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string id;
+            ClearText();
+            txtID.Clear();
+            object value = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            id = value.ToString();
+            txtID.AppendText(id);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -108,7 +113,7 @@ namespace Bride_Zilla
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Brak takiego indeksu!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Brak takiego inde!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

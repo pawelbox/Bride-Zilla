@@ -182,5 +182,15 @@ namespace Bride_Zilla
             invoice.toPay = int.Parse(txtToPay.Text);
             invoice.SaveInvoice(@"C:\Faktury\" + txtBride.Text + " i " + txtGroom.Text + ".txt");
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id;
+            ClearText();
+            txtID.Clear();
+            object value = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            id = value.ToString();
+            txtID.AppendText(id);
+        }
     }
 }
