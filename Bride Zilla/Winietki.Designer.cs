@@ -32,15 +32,11 @@ namespace Bride_Zilla
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Winietki));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rodzajDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zarezerwowaneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dostępneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtRemove = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtAV = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtReserv = new System.Windows.Forms.TextBox();
@@ -52,11 +48,8 @@ namespace Bride_Zilla
             this.txtID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnChange = new System.Windows.Forms.Button();
-            this.txtRemove = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paseBindingSource)).BeginInit();
-           
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,51 +59,12 @@ namespace Bride_Zilla
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.rodzajDataGridViewTextBoxColumn,
-            this.stanDataGridViewTextBoxColumn,
-            this.zarezerwowaneDataGridViewTextBoxColumn,
-            this.dostępneDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.paseBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 254);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(546, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // rodzajDataGridViewTextBoxColumn
-            // 
-            this.rodzajDataGridViewTextBoxColumn.DataPropertyName = "Rodzaj";
-            this.rodzajDataGridViewTextBoxColumn.HeaderText = "Rodzaj";
-            this.rodzajDataGridViewTextBoxColumn.Name = "rodzajDataGridViewTextBoxColumn";
-            // 
-            // stanDataGridViewTextBoxColumn
-            // 
-            this.stanDataGridViewTextBoxColumn.DataPropertyName = "Stan";
-            this.stanDataGridViewTextBoxColumn.HeaderText = "Stan";
-            this.stanDataGridViewTextBoxColumn.Name = "stanDataGridViewTextBoxColumn";
-            // 
-            // zarezerwowaneDataGridViewTextBoxColumn
-            // 
-            this.zarezerwowaneDataGridViewTextBoxColumn.DataPropertyName = "Zarezerwowane";
-            this.zarezerwowaneDataGridViewTextBoxColumn.HeaderText = "Zarezerwowane";
-            this.zarezerwowaneDataGridViewTextBoxColumn.Name = "zarezerwowaneDataGridViewTextBoxColumn";
-            // 
-            // dostępneDataGridViewTextBoxColumn
-            // 
-            this.dostępneDataGridViewTextBoxColumn.DataPropertyName = "Dostępne";
-            this.dostępneDataGridViewTextBoxColumn.HeaderText = "Dostępne";
-            this.dostępneDataGridViewTextBoxColumn.Name = "dostępneDataGridViewTextBoxColumn";
-            // 
-            // paseBindingSource
-            
             // 
             // btnAdd
             // 
@@ -149,6 +103,22 @@ namespace Bride_Zilla
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dodatki";
+            // 
+            // txtRemove
+            // 
+            this.txtRemove.Location = new System.Drawing.Point(184, 119);
+            this.txtRemove.Name = "txtRemove";
+            this.txtRemove.Size = new System.Drawing.Size(153, 21);
+            this.txtRemove.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(184, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Zużyte";
             // 
             // txtAV
             // 
@@ -210,9 +180,9 @@ namespace Bride_Zilla
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(7, 62);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 13);
+            this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Rodzaj winietki";
+            this.label10.Text = "Rodzaj";
             // 
             // txtID
             // 
@@ -248,22 +218,6 @@ namespace Bride_Zilla
             this.btnChange.UseVisualStyleBackColor = false;
             this.btnChange.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtRemove
-            // 
-            this.txtRemove.Location = new System.Drawing.Point(184, 119);
-            this.txtRemove.Name = "txtRemove";
-            this.txtRemove.Size = new System.Drawing.Size(153, 21);
-            this.txtRemove.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Zużyte";
-            // 
             // Winietki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,7 +235,6 @@ namespace Bride_Zilla
             this.Load += new System.EventHandler(this.Winietki_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paseBindingSource)).EndInit();
-            
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);

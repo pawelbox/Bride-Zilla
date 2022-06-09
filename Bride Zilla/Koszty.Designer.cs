@@ -33,6 +33,8 @@ namespace Bride_Zilla
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtPen = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtPase = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTravel = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@ namespace Bride_Zilla
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPen = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -111,6 +111,22 @@ namespace Bride_Zilla
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dodatki";
+            // 
+            // txtPen
+            // 
+            this.txtPen.Location = new System.Drawing.Point(7, 159);
+            this.txtPen.Name = "txtPen";
+            this.txtPen.Size = new System.Drawing.Size(153, 21);
+            this.txtPen.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Pendrive";
             // 
             // txtPase
             // 
@@ -279,22 +295,6 @@ namespace Bride_Zilla
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID klienta";
-            // 
-            // txtPen
-            // 
-            this.txtPen.Location = new System.Drawing.Point(7, 159);
-            this.txtPen.Name = "txtPen";
-            this.txtPen.Size = new System.Drawing.Size(153, 21);
-            this.txtPen.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Pendrive";
             // 
             // Koszty
             // 

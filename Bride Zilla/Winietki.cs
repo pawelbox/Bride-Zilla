@@ -66,7 +66,7 @@ namespace Bride_Zilla
             }
             catch (Exception)
             {
-               
+                MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ReloadGrid();
         }
@@ -96,13 +96,20 @@ namespace Bride_Zilla
         {
             if (txtID.Text.Length >= 1)
             {
-                ClearText();
-                LoadData load = new LoadData();
-                load.LoadPaseData("pase", txtID.Text);
-                txtSize.AppendText(load.size);
-                txtState.AppendText(load.estate.ToString());
-                txtReserv.AppendText(load.reserv.ToString());
-                txtAV.AppendText(load.av.ToString());
+                try
+                {
+                    ClearText();
+                    LoadData load = new LoadData();
+                    load.LoadPaseData("pase", txtID.Text);
+                    txtSize.AppendText(load.size);
+                    txtState.AppendText(load.estate.ToString());
+                    txtReserv.AppendText(load.reserv.ToString());
+                    txtAV.AppendText(load.av.ToString());
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Brak takiego indeksu!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
         }
