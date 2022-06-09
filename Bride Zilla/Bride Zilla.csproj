@@ -109,11 +109,6 @@
     <Compile Include="Read.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="Invoice.cs" />
-    <Compile Include="serwer117140_customerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Voucher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,17 +200,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="serwer117140_customerDataSet.xsc">
-      <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="serwer117140_customerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>serwer117140_customerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="serwer117140_customerDataSet.xss">
-      <DependentUpon>serwer117140_customerDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -38,8 +38,7 @@ namespace Bride_Zilla
             this.zarezerwowaneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dostępneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.serwer117140_customerDataSet = new Bride_Zilla.serwer117140_customerDataSet();
-            this.paseTableAdapter = new Bride_Zilla.serwer117140_customerDataSetTableAdapters.paseTableAdapter();
+            
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtAV = new System.Windows.Forms.TextBox();
@@ -57,7 +56,7 @@ namespace Bride_Zilla
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serwer117140_customerDataSet)).BeginInit();
+           
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,18 +110,7 @@ namespace Bride_Zilla
             this.dostępneDataGridViewTextBoxColumn.Name = "dostępneDataGridViewTextBoxColumn";
             // 
             // paseBindingSource
-            // 
-            this.paseBindingSource.DataMember = "pase";
-            this.paseBindingSource.DataSource = this.serwer117140_customerDataSet;
-            // 
-            // serwer117140_customerDataSet
-            // 
-            this.serwer117140_customerDataSet.DataSetName = "serwer117140_customerDataSet";
-            this.serwer117140_customerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // paseTableAdapter
-            // 
-            this.paseTableAdapter.ClearBeforeFill = true;
+            
             // 
             // btnAdd
             // 
@@ -293,7 +281,7 @@ namespace Bride_Zilla
             this.Load += new System.EventHandler(this.Winietki_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serwer117140_customerDataSet)).EndInit();
+            
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -303,9 +291,9 @@ namespace Bride_Zilla
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private serwer117140_customerDataSet serwer117140_customerDataSet;
+        
         private System.Windows.Forms.BindingSource paseBindingSource;
-        private serwer117140_customerDataSetTableAdapters.paseTableAdapter paseTableAdapter;
+       
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rodzajDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stanDataGridViewTextBoxColumn;

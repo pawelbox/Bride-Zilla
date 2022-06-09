@@ -20,6 +20,19 @@ namespace Bride_Zilla
             txtSize.Clear();
             txtState.Clear();
         }
+        public void ReloadGrid()
+        {
+            try
+            {
+                LoadData load = new LoadData();
+                load.LoadGridData("pase");
+                dataGridView1.DataSource = load.data.Tables[0];
+            }
+            catch(Exception)
+            {
+
+            }
+        }
         public Winietki()
         {
             InitializeComponent();
@@ -27,10 +40,7 @@ namespace Bride_Zilla
 
         private void Winietki_Load(object sender, EventArgs e)
         {
-            LoadData load = new LoadData();
-            load.LoadGridData("pase");
-            dataGridView1.DataSource = load.data.Tables[0];
-            //this.paseTableAdapter.Fill(this.serwer117140_customerDataSet.pase);
+            ReloadGrid();            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,8 +61,7 @@ namespace Bride_Zilla
                 update.av = update.estate - update.reserv;
 
                 update.Update("pase", " SET `ID`=@ID,`Rodzaj`=@size,`Stan`=@estate,`Zarezerwowane`=@reserv,`Dostępne`=@av WHERE ID=@ID");
-                //this.paseTableAdapter.Update(this.serwer117140_customerDataSet.pase);
-               // this.paseTableAdapter.Fill(this.serwer117140_customerDataSet.pase);
+              
                 ClearText();
             }
             catch (Exception)
