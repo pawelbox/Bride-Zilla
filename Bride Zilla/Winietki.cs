@@ -68,6 +68,7 @@ namespace Bride_Zilla
             {
                
             }
+            ReloadGrid();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,8 +87,9 @@ namespace Bride_Zilla
             update.av = update.estate - update.reserv;
 
             update.Update("pase", " SET `ID`=@ID,`Rodzaj`=@size,`Stan`=@estate,`Zarezerwowane`=@reserv,`Dostępne`=@av WHERE ID=@ID");
-           // this.paseTableAdapter.Fill(this.serwer117140_customerDataSet.pase);
+           
             ClearText();
+            ReloadGrid();
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
