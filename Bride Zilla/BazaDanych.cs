@@ -17,7 +17,7 @@ namespace Bride_Zilla
             if(DialogResult == DialogResult.Yes)
             {
                 StreamWriter zapis;
-                string path = @"C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\pliki\string.txt";
+                string path = @"C:\Program Files\Bride Zilla\string.txt";
                 zapis = File.CreateText(path);
                 zapis.WriteLine("server=" + txtServer.Text + "; user=" + txtName.Text + " ; database=" + txtUser.Text + " ; password=" + txtPass.Text + ";");
                 zapis.Close();

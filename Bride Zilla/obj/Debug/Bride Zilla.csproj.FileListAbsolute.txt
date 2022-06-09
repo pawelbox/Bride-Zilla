@@ -83,3 +83,4 @@ C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Winiet
 C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Voucher.resources
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Voucher.resources
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.BazaDanych.resources
+C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.BazaDanych.resources

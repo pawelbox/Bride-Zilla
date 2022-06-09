@@ -9,7 +9,7 @@ namespace Bride_Zilla
             public string read { get; set; }
             public void GetRead()
             {
-                string path = @"C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\pliki\string.txt";
+                string path = @"C:\Program Files\Bride_Zilla\string.txt";
                 StreamReader open = File.OpenText(path);
                 read = open.ReadLine();
                 open.Close();
