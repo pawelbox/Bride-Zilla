@@ -34,6 +34,7 @@ namespace Bride_Zilla
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comSource = new System.Windows.Forms.ComboBox();
             this.comContract = new System.Windows.Forms.ComboBox();
             this.comMeeting = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@ namespace Bride_Zilla
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comSource = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,6 +68,7 @@ namespace Bride_Zilla
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(960, 484);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEdit
             // 
@@ -127,6 +128,22 @@ namespace Bride_Zilla
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dane zapytania";
+            // 
+            // comSource
+            // 
+            this.comSource.FormattingEnabled = true;
+            this.comSource.Items.AddRange(new object[] {
+            "Facebook",
+            "Formularz ze strony",
+            "Telefon",
+            "Mail",
+            "Targi",
+            "Portal ślubny",
+            "Inne"});
+            this.comSource.Location = new System.Drawing.Point(7, 119);
+            this.comSource.Name = "comSource";
+            this.comSource.Size = new System.Drawing.Size(153, 21);
+            this.comSource.TabIndex = 18;
             // 
             // comContract
             // 
@@ -285,22 +302,6 @@ namespace Bride_Zilla
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID klienta";
-            // 
-            // comSource
-            // 
-            this.comSource.FormattingEnabled = true;
-            this.comSource.Items.AddRange(new object[] {
-            "Facebook",
-            "Formularz ze strony",
-            "Telefon",
-            "Mail",
-            "Targi",
-            "Portal ślubny",
-            "Inne"});
-            this.comSource.Location = new System.Drawing.Point(7, 119);
-            this.comSource.Name = "comSource";
-            this.comSource.Size = new System.Drawing.Size(153, 21);
-            this.comSource.TabIndex = 18;
             // 
             // Statystyka
             // 

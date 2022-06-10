@@ -208,5 +208,33 @@ namespace Bride_Zilla
                 }
             }
         }
+        public void GeneralCusomer(string table)
+        {
+            ConnectionString connect = new ConnectionString();
+            connect.Connect();
+            connect.con.Open();
+            MySqlCommand select = new MySqlCommand("SELECT * FROM " + table, connect.con);
+            
+            MySqlDataReader data = select.ExecuteReader();
+            if (data.HasRows)
+            {
+                while (data.Read())
+                {
+                    bride = data.GetString(1);
+                    brideAdress = data.GetString(2);
+                    bridePhone = data.GetString(3);
+                    groom = data.GetString(4);
+                    groomAdress = data.GetString(5);
+                    groomPhone = data.GetString(6);
+                    weddingDate = data.GetString(7);
+                    weddingPlace = data.GetString(8);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brak kartoteki!", "Błąd!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            data.Close();
+        }
     }
 }

@@ -58,5 +58,11 @@ namespace Bride_Zilla
             BazaDanych mySql = new BazaDanych();
             mySql.Show();
         }
+
+        private void kalendarzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Calendar calendar = new Calendar();
+            calendar.Show();
+        }
     }
 }

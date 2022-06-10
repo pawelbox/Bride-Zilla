@@ -98,5 +98,15 @@ namespace Bride_Zilla
                 txtDate.AppendText(load.date);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id;
+            ClearText();
+            txtID.Clear();
+            object value = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            id = value.ToString();
+            txtID.AppendText(id);
+        }
     }
 }

@@ -42,6 +42,7 @@ namespace Bride_Zilla
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bazaDanychMySqlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.intalacjaTabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kalendarzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@ namespace Bride_Zilla
             this.klieciToolStripMenuItem,
             this.księgowośćToolStripMenuItem,
             this.magazynToolStripMenuItem,
-            this.ustawieniaToolStripMenuItem});
+            this.ustawieniaToolStripMenuItem,
+            this.kalendarzToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
@@ -139,15 +141,22 @@ namespace Bride_Zilla
             // bazaDanychMySqlToolStripMenuItem
             // 
             this.bazaDanychMySqlToolStripMenuItem.Name = "bazaDanychMySqlToolStripMenuItem";
-            this.bazaDanychMySqlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bazaDanychMySqlToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.bazaDanychMySqlToolStripMenuItem.Text = "Baza danych MySql";
             this.bazaDanychMySqlToolStripMenuItem.Click += new System.EventHandler(this.bazaDanychMySqlToolStripMenuItem_Click);
             // 
             // intalacjaTabelToolStripMenuItem
             // 
             this.intalacjaTabelToolStripMenuItem.Name = "intalacjaTabelToolStripMenuItem";
-            this.intalacjaTabelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.intalacjaTabelToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.intalacjaTabelToolStripMenuItem.Text = "Intalacja tabel";
+            // 
+            // kalendarzToolStripMenuItem
+            // 
+            this.kalendarzToolStripMenuItem.Name = "kalendarzToolStripMenuItem";
+            this.kalendarzToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.kalendarzToolStripMenuItem.Text = "Kalendarz";
+            this.kalendarzToolStripMenuItem.Click += new System.EventHandler(this.kalendarzToolStripMenuItem_Click);
             // 
             // MainPage
             // 
@@ -185,6 +194,7 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bazaDanychMySqlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem intalacjaTabelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kalendarzToolStripMenuItem;
     }
 }
 
