@@ -73,9 +73,9 @@ namespace Bride_Zilla
                 insert.weddingDate = txtDate.Text;
                 insert.weddingPlace = txtPlace.Text;
 
-                insert.Insert("INSERT INTO ","customers", " VALUES(@ID,@bride,@brideAdress,@bridePhone, @groom, @groomAdress,@groomPhone,@weddingDate,@weddingPlace)");
-                insert.Insert("INSERT INTO ","bill", " VALUES(@ID,'0','0','0','Nie','0','0','0','0','0','0','0','Nie')");
-                insert.Insert("INSERT INTO ","costs", " VALUES(@ID,'0','0','0','0','0','0','0')");
+                insert.Insert("INSERT INTO ", "customers", " VALUES(@ID,@bride,@brideAdress,@bridePhone, @groom, @groomAdress,@groomPhone,@weddingDate,@weddingPlace)");
+                insert.Insert("INSERT INTO ", "bill", " VALUES(@ID,'0','0','0','Nie','0','0','0','0','0','0','0','Nie')");
+                insert.Insert("INSERT INTO ", "costs", " VALUES(@ID,'0','0','0','0','0','0','0')");
 
                 MessageBox.Show("Utworzyłem kartotekę i rachunek dla klienta:" + txtBride.Text, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -156,12 +156,11 @@ namespace Bride_Zilla
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id;
             ClearText();
             txtID.Clear();
-            object value = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            id = value.ToString();
-            txtID.AppendText(id);
+            ContentClick click = new ContentClick();
+            click.Click(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            txtID.AppendText(click.id);
         }
     }
 }

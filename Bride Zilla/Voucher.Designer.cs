@@ -62,6 +62,7 @@ namespace Bride_Zilla
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(970, 327);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox4
             // 
@@ -119,7 +120,7 @@ namespace Bride_Zilla
             this.label2.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label2.Location = new System.Drawing.Point(340, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Zrealizowany";
             // 
@@ -136,7 +137,7 @@ namespace Bride_Zilla
             this.label1.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label1.Location = new System.Drawing.Point(175, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Termin ważności";
             // 
@@ -153,7 +154,7 @@ namespace Bride_Zilla
             this.label12.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label12.Location = new System.Drawing.Point(175, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
+            this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 8;
             this.label12.Text = "Cena";
             // 
@@ -170,7 +171,7 @@ namespace Bride_Zilla
             this.label8.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label8.Location = new System.Drawing.Point(175, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 6;
             this.label8.Text = "Zawartość";
             // 
@@ -180,7 +181,7 @@ namespace Bride_Zilla
             this.label9.Font = new System.Drawing.Font("Lato", 8.25F);
             this.label9.Location = new System.Drawing.Point(7, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 13);
+            this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 4;
             this.label9.Text = "Typ sesji";
             // 

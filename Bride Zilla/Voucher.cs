@@ -102,5 +102,14 @@ namespace Bride_Zilla
                 MessageBox.Show("Błąd połączenia z kartoteką!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ClearText();
+            txtID.Clear();
+            ContentClick click = new ContentClick();
+            click.Click(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            txtID.AppendText(click.id);
+        }
     }
 }
