@@ -112,6 +112,9 @@
     <Compile Include="Calendar.Designer.cs">
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContentClick.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Read.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="Invoice.cs" />

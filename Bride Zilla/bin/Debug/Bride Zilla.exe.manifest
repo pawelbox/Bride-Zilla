@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bride Zilla.exe" size="165344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bride Zilla.exe" size="164864">
       <assemblyIdentity name="Bride Zilla" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xx0nW20qWrNZqXU9HD3l9W0IQfz8sPz6zSBf8mitFHg=</dsig:DigestValue>
+        <dsig:DigestValue>t4rND+Wa0NMbDwgmb1v9iMLBv4jzFypcP2jFzd7nQiE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
