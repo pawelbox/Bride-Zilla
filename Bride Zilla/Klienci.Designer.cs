@@ -55,7 +55,6 @@ namespace Bride_Zilla
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -298,7 +297,7 @@ namespace Bride_Zilla
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.Location = new System.Drawing.Point(412, 810);
+            this.btnDelete.Location = new System.Drawing.Point(279, 810);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 39);
             this.btnDelete.TabIndex = 15;
@@ -306,23 +305,6 @@ namespace Bride_Zilla
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BackColor = System.Drawing.Color.White;
-            this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
-            this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLoad.Location = new System.Drawing.Point(279, 810);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(127, 39);
-            this.btnLoad.TabIndex = 16;
-            this.btnLoad.Text = "Wczytaj klienta";
-            this.btnLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnEdit
             // 
@@ -348,7 +330,6 @@ namespace Bride_Zilla
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1164, 861);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -401,7 +382,6 @@ namespace Bride_Zilla
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnEdit;
     }
 }
