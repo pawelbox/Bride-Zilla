@@ -42,7 +42,6 @@ namespace Bride_Zilla
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bazaDanychMySqlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.intalacjaTabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kalendarzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,8 +51,7 @@ namespace Bride_Zilla
             this.klieciToolStripMenuItem,
             this.księgowośćToolStripMenuItem,
             this.magazynToolStripMenuItem,
-            this.ustawieniaToolStripMenuItem,
-            this.kalendarzToolStripMenuItem});
+            this.ustawieniaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
@@ -74,28 +72,28 @@ namespace Bride_Zilla
             // kartaKlientaToolStripMenuItem
             // 
             this.kartaKlientaToolStripMenuItem.Name = "kartaKlientaToolStripMenuItem";
-            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.kartaKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kartaKlientaToolStripMenuItem.Text = "Karta klienta";
             this.kartaKlientaToolStripMenuItem.Click += new System.EventHandler(this.kartaKlientaToolStripMenuItem_Click);
             // 
             // rachunekKlientaToolStripMenuItem
             // 
             this.rachunekKlientaToolStripMenuItem.Name = "rachunekKlientaToolStripMenuItem";
-            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.rachunekKlientaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rachunekKlientaToolStripMenuItem.Text = "Rachunek klienta";
             this.rachunekKlientaToolStripMenuItem.Click += new System.EventHandler(this.rachunekKlientaToolStripMenuItem_Click);
             // 
             // statystykaZapytańToolStripMenuItem
             // 
             this.statystykaZapytańToolStripMenuItem.Name = "statystykaZapytańToolStripMenuItem";
-            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.statystykaZapytańToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statystykaZapytańToolStripMenuItem.Text = "Statystyka zapytań";
             this.statystykaZapytańToolStripMenuItem.Click += new System.EventHandler(this.statystykaZapytańToolStripMenuItem_Click);
             // 
             // voucheryToolStripMenuItem
             // 
             this.voucheryToolStripMenuItem.Name = "voucheryToolStripMenuItem";
-            this.voucheryToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.voucheryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.voucheryToolStripMenuItem.Text = "Vouchery";
             this.voucheryToolStripMenuItem.Click += new System.EventHandler(this.voucheryToolStripMenuItem_Click);
             // 
@@ -151,13 +149,6 @@ namespace Bride_Zilla
             this.intalacjaTabelToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.intalacjaTabelToolStripMenuItem.Text = "Intalacja tabel";
             // 
-            // kalendarzToolStripMenuItem
-            // 
-            this.kalendarzToolStripMenuItem.Name = "kalendarzToolStripMenuItem";
-            this.kalendarzToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.kalendarzToolStripMenuItem.Text = "Kalendarz";
-            this.kalendarzToolStripMenuItem.Click += new System.EventHandler(this.kalendarzToolStripMenuItem_Click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +185,6 @@ namespace Bride_Zilla
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bazaDanychMySqlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem intalacjaTabelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kalendarzToolStripMenuItem;
     }
 }
 

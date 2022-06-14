@@ -85,4 +85,3 @@ C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla
 C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.BazaDanych.resources
 C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.BazaDanych.resources
 C:\Users\lapek\source\repos\Bride Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Calendar.resources
-C:\Users\firma\Desktop\Weselne-CRM\Bride-Zilla\Bride Zilla\obj\Debug\Bride_Zilla.Calendar.resources

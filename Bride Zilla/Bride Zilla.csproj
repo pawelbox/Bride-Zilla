@@ -106,12 +106,6 @@
     <Compile Include="BazaDanych.Designer.cs">
       <DependentUpon>BazaDanych.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calendar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Calendar.Designer.cs">
-      <DependentUpon>Calendar.cs</DependentUpon>
-    </Compile>
     <Compile Include="ContentClick.cs" />
     <Compile Include="Read.cs" />
     <Compile Include="ConnectionString.cs" />
@@ -162,9 +156,6 @@
     <Compile Include="DataOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Calendar.resx">
-      <DependentUpon>Calendar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Koszty.resx">
       <DependentUpon>Koszty.cs</DependentUpon>
     </EmbeddedResource>
